@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class FlagControl : MonoBehaviour {
     Rigidbody2D physicObject;
-	// Use this for initialization
-	void Start () {
+
+    void Awake () {
         physicObject = GetComponent<Rigidbody2D>();
 	}
 	
