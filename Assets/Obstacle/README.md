@@ -1,10 +1,10 @@
 # Obstacle
 
 - [Component](#Component)
-  - ✅ [School](#School)
-  - [ ] [Mahanakhon Building](#Mahanakhon-Building)
+  - ✅ [School](###School)
+  - [ ] [Mahanakhon Building](###Mahanakhon-Building)
 - [Util](#Util)
-  - [Spwaner](#Spwaner)
+  - [Spwaner](###Spwaner)
  
 ## Component
 ---
