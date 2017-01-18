@@ -2,20 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Test : MonoBehaviour {
+public class LanguageManager : MonoBehaviour {
+
+    public Sprite thSprite;
 
 	// Use this for initialization
 	void Start () {
-
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-
-    }
+		
+	}
 
     private void OnLevelWasLoaded(int level)
     {
-        Debug.Log(PlayerPrefs.GetString("lang"));
+        if (PlayerPrefs.GetString("lang") == "th")
+            GetComponent<SpriteRenderer>().sprite = thSprite;
     }
 }
