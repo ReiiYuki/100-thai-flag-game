@@ -1,13 +1,13 @@
 # Obstacle
 
 - [Component](#component)
-  - ✅ [School](#school)
+  - [*] [School](#school) ✅
   - [ ] [Mahanakhon Building](#mahanakhon-building)
 - [Util](#util)
   - [Spwaner](#spwaner)
  
 ## Component
----
+
 
 ### School
 
@@ -15,6 +15,5 @@
 ### Mahanakhon Building
 
 ## Util
----
 
 ### Spwaner
