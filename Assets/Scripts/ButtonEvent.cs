@@ -6,6 +6,7 @@ public class ButtonEvent : MonoBehaviour {
 
     public Sprite spriteNormal;
     public Sprite spriteOnHover;
+    public string language;
 
 	// Use this for initialization
 	void Start () {
@@ -25,5 +26,11 @@ public class ButtonEvent : MonoBehaviour {
     void OnMouseExit()
     {
         GetComponent<SpriteRenderer>().sprite = spriteNormal;
+    }
+
+    private void OnMouseDown()
+    {
+        PlayerPrefs.SetString("lang", language);
+        Application.LoadLevel("Main_Menu_Scene");
     }
 }
