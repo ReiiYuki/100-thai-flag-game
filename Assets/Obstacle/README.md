@@ -2,9 +2,9 @@
 
 - [Component](#component)
   - ✅ [School](#school)
-  - [ ] [Mahanakhon Building](###mahanakhon-building)
-- [Util](#Util)
-  - [Spwaner](###Spwaner)
+  - [ ] [Mahanakhon Building](#mahanakhon-building)
+- [Util](#util)
+  - [Spwaner](#spwaner)
  
 ## Component
 ---
