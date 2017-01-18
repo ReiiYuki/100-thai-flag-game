@@ -1,7 +1,7 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "100-thai-flag-game", "100-thai-flag-game.csproj", "{3553934D-F886-6DBF-2CC0-24EA6820C5E5}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{2DD4E22A-6F22-2FED-AD2B-26F366C5E205}") = "100-thai-flag-game", "Assembly-CSharp.csproj", "{5E2FAB0A-1D29-821C-6B43-D705B2154E42}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,12 +9,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3553934D-F886-6DBF-2CC0-24EA6820C5E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3553934D-F886-6DBF-2CC0-24EA6820C5E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3553934D-F886-6DBF-2CC0-24EA6820C5E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3553934D-F886-6DBF-2CC0-24EA6820C5E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E2FAB0A-1D29-821C-6B43-D705B2154E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E2FAB0A-1D29-821C-6B43-D705B2154E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E2FAB0A-1D29-821C-6B43-D705B2154E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E2FAB0A-1D29-821C-6B43-D705B2154E42}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
