@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonEvent : MonoBehaviour {
 
@@ -31,6 +32,6 @@ public class ButtonEvent : MonoBehaviour {
     private void OnMouseDown()
     {
         PlayerPrefs.SetString("lang", language);
-        Application.LoadLevel("Main_Menu_Scene");
+        SceneManager.LoadScene("Main Menu Scene");
     }
 }
