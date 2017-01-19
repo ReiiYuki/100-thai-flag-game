@@ -1,5 +1,5 @@
 # 100-thai-flag-game
 Coming Soon...
 
-## Document
+## Documents
 - [Obstacle](docs/Obstacle.md)
