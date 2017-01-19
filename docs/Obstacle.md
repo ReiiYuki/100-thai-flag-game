@@ -4,6 +4,7 @@
   
   Start height | End height |Obstacle | Status
   :-----------:|:----------:|:-------:|:------:
+  8|100| [Pigeon](#pigeon), [Black Crow](#black-crow), [Drone](#drone), [Balloon](#balloon), [Hot-air bollon (โคมรอย)](#hot-air-bolloon) | 
       XXX | XXX | [School](#school) |   ✅
   - [x] 
   - [ ] [Empire Tower](#empire-tower)
