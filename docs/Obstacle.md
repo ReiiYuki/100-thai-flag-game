@@ -38,7 +38,9 @@
 
 - [Util](#util)
   - [Spwaner](#spwaner)
+- [Behavior](#behaveior)
 - [collaborator](#collaborator)
+
 ## Component
 
 
@@ -64,9 +66,17 @@ Jewelry Treade Center
 
 ### Spwaner
 
+## Behavior
+
+ name | descriptions | Pattern | Generation
+ -----|--------------|---------|-----------
+ linear  | moving in linear path | left to right, top to bottom | [ ]
+
 ## Collaborator
 - [@pakponj](https://github.com/pakponj)
 - [@wit543](https://github.com/wit543)
+
+
 
 
 [Mahanakhon Building 1]: http://news.mthai.com/app/uploads/2016/08/%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3-_5175-683x1024.jpg
