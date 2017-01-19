@@ -68,9 +68,9 @@ Jewelry Treade Center
 
 ## Behavior
 
- | name | descriptions | Pattern | Generation |
- |-----|--------------|---------|-----------|
- | linear  | moving in linear path | left to right, top to bottom | YES |
+  name | descriptions | Pattern | Generation 
+ -----|--------------|---------|:-----------:
+  linear  | moving in linear path | left to right, top to bottom | YES 
 
 ## Collaborator
 - [@pakponj](https://github.com/pakponj)
