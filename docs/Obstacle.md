@@ -1,7 +1,11 @@
 # Obstacle
 
 - [Component](#component)
-  - [x] [School](#school) ✅
+  
+  Obstacle | start height | end height | status
+  :-------:|:------------:|:----------:|:------:
+  [School] | XXX | XXX | (#school) ✅
+  - [x] 
   - [ ] [Empire Tower](#empire-tower)
   - [ ] [Jewelry Trade Center](#jewelry-trade-center)
   - [ ] [Baiyoke Tower II](#baiyoke-tower-ii)
