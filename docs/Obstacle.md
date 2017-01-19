@@ -72,6 +72,8 @@ Jewelry Treade Center
  -----|--------------|---------|:-----------:
   linear  | moving in linear path | left to right, top to bottom | YES 
 
+
+
 ## Collaborator
 - [@pakponj](https://github.com/pakponj)
 - [@wit543](https://github.com/wit543)
