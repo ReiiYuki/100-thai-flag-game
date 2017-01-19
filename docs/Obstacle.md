@@ -4,7 +4,7 @@
   
   Obstacle | start height | end height | status
   :-------:|:------------:|:----------:|:------:
-  [School] | XXX | XXX | (#school) ✅
+  [School](#school) | XXX | XXX |  ✅
   - [x] 
   - [ ] [Empire Tower](#empire-tower)
   - [ ] [Jewelry Trade Center](#jewelry-trade-center)
