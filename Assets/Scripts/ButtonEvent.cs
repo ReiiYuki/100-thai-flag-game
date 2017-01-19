@@ -32,6 +32,6 @@ public class ButtonEvent : MonoBehaviour {
     private void OnMouseDown()
     {
         PlayerPrefs.SetString("lang", language);
-        SceneManager.LoadScene("Main Menu Scene");
+        SceneManager.LoadScene("Main_Menu_Scene");
     }
 }

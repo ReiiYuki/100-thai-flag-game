@@ -75,8 +75,11 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\ButtonEvent.cs" />
+    <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\FlagControl.cs" />
     <Compile Include="Assets\Scripts\FloorDetection.cs" />
+    <Compile Include="Assets\Scripts\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\WindForce.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
