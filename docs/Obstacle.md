@@ -5,7 +5,10 @@
   Start height | End height |Obstacle | Status
   :-----------:|:----------:|:-------:|:------:
   8|100| [Pigeon](#pigeon), [Black Crow](#black-crow), [Drone](#drone), [Balloon](#balloon), [Hot-air bollon (โคมรอย)](#hot-air-bolloon) | 
-      XXX | XXX | [School](#school) |   ✅
+  XXX | XXX | [School](#school) |   ✅
+  65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | 
+  81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) |
+  100 | 132 | [เจดีย์ ภูเขาทอง วัดสระเกศ](#เจดีย์ ภูเขาทอง วัดสระเกศ) |
   - [x] 
   - [ ] [Empire Tower](#empire-tower)
   - [ ] [Jewelry Trade Center](#jewelry-trade-center)
