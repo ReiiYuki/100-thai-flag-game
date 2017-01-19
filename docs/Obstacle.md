@@ -2,9 +2,9 @@
 
 - [Component](#component)
   
-  Obstacle | start height | end height | status
-  :-------:|:------------:|:----------:|:------:
-  [School](#school) | XXX | XXX |  ✅
+  Start height | End height |Obstacle | Status
+  :-----------:|:----------:|:-------:|:------:
+      XXX | XXX | [School](#school) |   ✅
   - [x] 
   - [ ] [Empire Tower](#empire-tower)
   - [ ] [Jewelry Trade Center](#jewelry-trade-center)
