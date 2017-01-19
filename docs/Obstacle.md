@@ -69,7 +69,7 @@ Jewelry Treade Center
 ## Behavior
 
  | name | descriptions | Pattern | Generation |
- |-----|--------------|---------|:-----------:|
+ |-----|--------------|---------|-----------|
  | linear  | moving in linear path | left to right, top to bottom | YES |
 
 ## Collaborator
