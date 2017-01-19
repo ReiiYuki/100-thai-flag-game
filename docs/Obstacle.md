@@ -70,7 +70,7 @@ Jewelry Treade Center
 
  name | descriptions | Pattern | Generation
  -----|--------------|---------|-----------
- linear  | moving in linear path | left to right, top to bottom | [ ]
+ linear  | moving in linear path | left to right, top to bottom | YES
 
 ## Collaborator
 - [@pakponj](https://github.com/pakponj)
