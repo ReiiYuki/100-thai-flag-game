@@ -20,6 +20,36 @@
   421 | 421 | [Kuala Lumpur Tower](#Kuala Lumpur Tower)
   509 | 510 | [Teipei 101](#teipei-101) |
   541 | 542 | [ One World Trade Center ](# One World Trade Center ) |
+  600 | 660 | [Canton Tower](#Canton Tower) |
+  634 | 634 | [ Tokyo Sky Tree](# Tokyo Sky Tree) |
+  829 | 829 | [[Burj Khalifa](#burj-khalifa)] |
+  1000 | 1000 | [stratus cloud](#stratus cloud) |
+  1950 | 1950 | [ยอดเขา โมโกจู](#ยอดเขา โมโกจู) |
+  2000 | 2000 | [stratocumurus cloud](#stratocumurus cloud) |
+  2600 | 2600 | [ยอดดอยอินทนนท์](#ยอดดอยอินทนนท์) |
+  3000 | 3000 | [altostratus](#altostratus) |
+  3776 | 3776 | [Fuji Mountain](#Fuji Mountain) |
+  4000 | 4000 | [ altocumulus cloud](# altocumulus cloud) |
+  4125 | 4125 | [Kings Peak](#Kings Peak) |
+  4421 | 4421 | [Mount Whitney](#Mount Whitney) |
+  4807 | 4807 | [Mount Blanc](#Mount Blanc) |
+  5489 | 5489 | [Mount Elias](#Mount Elias) |
+  6190 | 6190 | [Mount Denali](#Mount Denali) |
+  6569 | 6569 | [Tupungato](#Tupungato) |
+  7000 | 7000 | [cirrocumulus cloud](#cirrocumulus cloud) |
+  7654 | 7654 | [Chocholisa](#Chocholisa) |
+  8000 | 8000 | [cumulonimbus cloud](#cumulonimbus cloud) |
+  8848 | 8848 | [Mt. Everest](#Mt. Everest) |
+  11887 | 11887 | [Dassault Falcon 900 EX](#Dassault Falcon 900 EX) |
+  15400 | 15400 | [B-2A](#B-2A) |
+  18000 | 18000 | [Concorde](#Concorde) |
+  20079 | 20079 | [English Electric Canberra](#English Electric Canberra)
+  24000 | 24000 | [Black bird SR-71](#Black bird SR-71) |
+  112000 | 112000 | [SpaceShipOne](#SpaceShipOne) |
+  400000 | 400000 | [ISS](#ISS) |
+  589000 | 589000 | [Hubble Telescope](#hubble-telescope) |
+  690000 | 690000 | [THEOS](#theos) |
+  3210000 | 321000 | [ไทยคม8](#ไทยคม8) |
   - [x] 
   - [ ] [Empire Tower](#empire-tower)
   - [ ] [Jewelry Trade Center](#jewelry-trade-center)
