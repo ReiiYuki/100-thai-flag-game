@@ -95,7 +95,7 @@
 ## Component
 
 ### Pigeon
-  ![pegeon]
+  ![pegeon 1]
 ### School
 
     static
