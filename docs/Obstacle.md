@@ -95,7 +95,9 @@
 ## Component
 
 ### Pigeon
+  [Pigeon poop](#pigeon-poop)
   ![pigeon 1]
+### Pigeon Poop
 ### School
 
     static
