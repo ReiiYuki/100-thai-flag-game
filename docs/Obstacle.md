@@ -2,20 +2,20 @@
 
 - [Component](#component)
   
-  Start height | End height |Obstacle | Status
-  :-----------:|:----------:|:-------:|:------:
+  Start height | End height |Obstacle | scene | Status
+  :-----------:|:----------:|:-------:|:-----:|:-----:
   8|100| [Pigeon](#pigeon), [Black Crow](#black-crow), [Drone](#drone), [Balloon](#balloon), [Hot-air bollon (โคมรอย)](#hot-air-bolloon) | 
-  60 | 200 | [flower pot falling](#flow-pot-falling0) |
-  100 | 800 | [Glass breaking](#glass-breaking) | 
-  XXX | XXX | [School](#school) |   ✅
-  65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | 
-  81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) |
-  100 | 132 | [เจดีย์ ภูเขาทอง วัดสระเกศ](#เจดีย์ ภูเขาทอง วัดสระเกศ) |
-  132.2 | 134| [ หอบังคับการบินท่าอากาศยานสุวรรณภูมิ](# หอบังคับการบินท่าอากาศยานสุวรรณภูมิ) |
-  165 | 189 | [ไซเบอร์ ทาวเวอร์ 2](#ไซเบอร์ ทาวเวอร์ 2) |
-  190 | 207 | [เสาธงที่สูงที่สุดในไทย](#เสาธงที่สูงที่สุดในไทย) |
-  208 | 275 | [อาคารสำนักงานใหญ่ กสิกรไทย](#อาคารสำนักงานใหญ่ กสิกรไทย) |
-  275 | 280 | [ เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A](# เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A) |
+  60 | 200 | [flower pot falling](#flow-pot-falling0) | |
+  100 | 800 | [Glass breaking](#glass-breaking) | |
+  XXX | XXX | [School](#school) |  | ✅
+  65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | |
+  81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) | |
+  100 | 132 | [เจดีย์ ภูเขาทอง วัดสระเกศ](#เจดีย์ ภูเขาทอง วัดสระเกศ) | |
+  132.2 | 134| [ หอบังคับการบินท่าอากาศยานสุวรรณภูมิ](# หอบังคับการบินท่าอากาศยานสุวรรณภูมิ) | |
+  165 | 189 | [ไซเบอร์ ทาวเวอร์ 2](#ไซเบอร์ ทาวเวอร์ 2) | |
+  190 | 207 | [เสาธงที่สูงที่สุดในไทย](#เสาธงที่สูงที่สุดในไทย) | |
+  208 | 275 | [อาคารสำนักงานใหญ่ กสิกรไทย](#อาคารสำนักงานใหญ่ กสิกรไทย) | |
+  275 | 280 | [ เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A](# เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A) | |
   314 | 315 | [มหานคร ทาวเวอร์](#มหานคร ทาวเวอร์) |
   330 | 331 | [Ryugyong Hotel](#Ryugyong Hotel) |
   381 | 382 | [Empire State](#Empire State) |
@@ -126,6 +126,7 @@ free fall| moving down by gravity | top to bottom || NO
 A* tracking | moving toward the player in a shortest parth  | moving by parth | YES/NO
 X/Y delay tracking | moving toward the player in a simpliest parth | moving in direction of the player | NO/YES
 Random | moving in a random direction/speed | Random | NO/YES
+
 
 
 
