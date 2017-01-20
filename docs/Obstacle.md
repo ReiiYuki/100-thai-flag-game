@@ -131,6 +131,8 @@ free fall| moving down by gravity | top to bottom || NO
 A* tracking | moving toward the player in a shortest parth  | moving by parth | YES/NO
 X/Y delay tracking | moving toward the player in a simpliest parth | moving in direction of the player | NO/YES
 Random | moving in a random direction/speed | Random | NO/YES
+static | not move at all | No pattern | YES
+Circle | moving in a circle parth | Yes | No
 
 
 
