@@ -118,8 +118,11 @@ Jewelry Treade Center
 ## Behavior
 
   name | descriptions | Pattern | Generation 
- -----|--------------|---------|:-----------:
-  linear  | moving in linear path | left to right, top to bottom | YES 
+ :----:|:------------:|:-------:|:-----------:
+ linear  | moving in linear path | left to right, top to bottom | YES 
+free fall| moving down by gravity | top to bottom || NO
+A* tracking | moving toward the player in a shortest parth  | moving by parth | YES/NO
+X/Y delay tracking | moving toward the player in a simpliest parth | moving in direction of the player | NO/YES
 
 
 
