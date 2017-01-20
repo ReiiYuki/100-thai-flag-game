@@ -94,7 +94,8 @@
 
 ## Component
 
-
+### Pigeon
+  ![pegeon]
 ### School
 
     static
@@ -139,3 +140,5 @@ Random | moving in a random direction/speed | Random | NO/YES
 
 [Mahanakhon Building 1]: http://news.mthai.com/app/uploads/2016/08/%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3-_5175-683x1024.jpg
 [Mahanakhon Building 2]: http://www.cityupdate.in.th/bangkok/wp-content/uploads/sites/3/2016/06/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%81%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B8%82-714802.jpg
+
+[pigeon 1]: http://pngimg.com/upload/pigeon_PNG3426.png
