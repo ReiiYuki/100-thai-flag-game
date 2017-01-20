@@ -2,20 +2,20 @@
 
 - [Component](#component)
   
-  Start height | End height |Obstacle | Status
-  :-----------:|:----------:|:-------:|:------:
+  Start height | End height |Obstacle | scene | Status
+  :-----------:|:----------:|:-------:|:-----:|:-----:
   8|100| [Pigeon](#pigeon), [Black Crow](#black-crow), [Drone](#drone), [Balloon](#balloon), [Hot-air bollon (โคมรอย)](#hot-air-bolloon) | 
-  60 | 200 | [flower pot falling](#flow-pot-falling0) |
-  100 | 800 | [Glass breaking](#glass-breaking) | 
-  XXX | XXX | [School](#school) |   ✅
-  65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | 
-  81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) |
-  100 | 132 | [เจดีย์ ภูเขาทอง วัดสระเกศ](#เจดีย์ ภูเขาทอง วัดสระเกศ) |
-  132.2 | 134| [ หอบังคับการบินท่าอากาศยานสุวรรณภูมิ](# หอบังคับการบินท่าอากาศยานสุวรรณภูมิ) |
-  165 | 189 | [ไซเบอร์ ทาวเวอร์ 2](#ไซเบอร์ ทาวเวอร์ 2) |
-  190 | 207 | [เสาธงที่สูงที่สุดในไทย](#เสาธงที่สูงที่สุดในไทย) |
-  208 | 275 | [อาคารสำนักงานใหญ่ กสิกรไทย](#อาคารสำนักงานใหญ่ กสิกรไทย) |
-  275 | 280 | [ เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A](# เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A) |
+  60 | 200 | [flower pot falling](#flow-pot-falling0) | |
+  100 | 800 | [Glass breaking](#glass-breaking) | |
+  XXX | XXX | [School](#school) |  | ✅
+  65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | |
+  81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) | |
+  100 | 132 | [เจดีย์ ภูเขาทอง วัดสระเกศ](#เจดีย์ ภูเขาทอง วัดสระเกศ) | |
+  132.2 | 134| [ หอบังคับการบินท่าอากาศยานสุวรรณภูมิ](# หอบังคับการบินท่าอากาศยานสุวรรณภูมิ) | |
+  165 | 189 | [ไซเบอร์ ทาวเวอร์ 2](#ไซเบอร์ ทาวเวอร์ 2) | |
+  190 | 207 | [เสาธงที่สูงที่สุดในไทย](#เสาธงที่สูงที่สุดในไทย) | |
+  208 | 275 | [อาคารสำนักงานใหญ่ กสิกรไทย](#อาคารสำนักงานใหญ่ กสิกรไทย) | |
+  275 | 280 | [ เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A](# เดอะ ริวเวอร์ เซาท์ ทาวเวอร์ A) | |
   314 | 315 | [มหานคร ทาวเวอร์](#มหานคร ทาวเวอร์) |
   330 | 331 | [Ryugyong Hotel](#Ryugyong Hotel) |
   381 | 382 | [Empire State](#Empire State) |
@@ -94,7 +94,12 @@
 
 ## Component
 
-
+### Pigeon
+  [Pigeon poop](#pigeon-poop)
+  
+  
+  ![pigeon 1]
+### Pigeon Poop
 ### School
 
     static
@@ -129,6 +134,7 @@ Random | moving in a random direction/speed | Random | NO/YES
 
 
 
+
 ## Collaborator
 - [@pakponj](https://github.com/pakponj)
 - [@wit543](https://github.com/wit543)
@@ -138,3 +144,5 @@ Random | moving in a random direction/speed | Random | NO/YES
 
 [Mahanakhon Building 1]: http://news.mthai.com/app/uploads/2016/08/%E0%B8%95%E0%B8%B6%E0%B8%81%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%99%E0%B8%84%E0%B8%A3-_5175-683x1024.jpg
 [Mahanakhon Building 2]: http://www.cityupdate.in.th/bangkok/wp-content/uploads/sites/3/2016/06/%E0%B8%AA%E0%B8%A1%E0%B8%B2%E0%B8%8A%E0%B8%B4%E0%B8%81%E0%B8%AB%E0%B8%A1%E0%B8%B2%E0%B8%A2%E0%B9%80%E0%B8%A5%E0%B8%82-714802.jpg
+
+[pigeon 1]: http://pngimg.com/upload/pigeon_PNG3426.png
