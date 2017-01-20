@@ -29,9 +29,11 @@ public class ButtonEvent : MonoBehaviour {
         GetComponent<SpriteRenderer>().sprite = spriteNormal;
     }
 
-    private void OnMouseDown()
+    private void OnMouseUp()
     {
         PlayerPrefs.SetString("lang", language);
         SceneManager.LoadScene("Main_Menu_Scene");
+
     }
+
 }
