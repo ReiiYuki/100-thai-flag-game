@@ -5,6 +5,8 @@
   Start height | End height |Obstacle | Status
   :-----------:|:----------:|:-------:|:------:
   8|100| [Pigeon](#pigeon), [Black Crow](#black-crow), [Drone](#drone), [Balloon](#balloon), [Hot-air bollon (โคมรอย)](#hot-air-bolloon) | 
+  60 | 200 | [flower pot falling](#flow-pot-falling0) |
+  100 | 800 | [Glass breaking](#glass-breaking) | 
   XXX | XXX | [School](#school) |   ✅
   65 | 80 | [หอแก้วมุกดาหาร](#หอแก้วมุกดาหาร) | 
   81 | 100| [พระปรางค์ วัดอรุณ](#พระปรางค์ วัดอรุณ) |
