@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
      <Compile Include="Assets\Scripts\LanguageManager.cs" />
      <Compile Include="Assets\Scripts\Obstacle.cs" />
+     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
      <Compile Include="Assets\Scripts\WindForce.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

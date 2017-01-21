@@ -11,6 +11,8 @@ public class FlagCtrl : MonoBehaviour {
 	// Exposed on inspector
 	public float forceMagnitude = 7.5f;
 	public bool hasStarted = false;
+	private GameObject topAnchor;
+	private GameObject bottomAnchor;
 
 	void Awake() {
 		//Reference physic2D to flag's Rigidbody2D
@@ -45,5 +47,12 @@ public class FlagCtrl : MonoBehaviour {
 			hasStarted = true;
 			physic2D.WakeUp ();
 		} 
+	}
+
+	void renderStrings() {
+		LineRenderer[] flagStrings = gameObject.GetComponentsInChildren<LineRenderer> ();
+		foreach (LineRenderer flagString in flagStrings) {
+			flagString.SetPosition (1, gameObject.transform.position);
+		}
 	}
 }
