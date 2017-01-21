@@ -20,11 +20,12 @@ public class HorizontalMovementBird : Bird {
 	
 	// Update is called once per frame
 	void Update () {
-//		this.Fly ();
-		float fracDistance = (Time.time - startTime) * flyingSpeed / distance;
-		gameObject.transform.position = Vector2.Lerp (originalPosition, finalPosition, fracDistance );
+		this.Fly ();
 	}
 
 	public override void Fly() {
+		float fracDistance = (Time.time - startTime) * flyingSpeed / distance;
+		gameObject.transform.position = Vector2.Lerp (originalPosition, finalPosition, fracDistance );
 	}
+		
 }

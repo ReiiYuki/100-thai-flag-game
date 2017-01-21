@@ -11,8 +11,10 @@ public class FlagCtrl : MonoBehaviour {
 	// Exposed on inspector
 	public float forceMagnitude = 7.5f;
 	public bool hasStarted = false;
+	private bool hasDied = false;
 	private GameObject topAnchor;
 	private GameObject bottomAnchor;
+	private int hitPoint = 1;
 
 	void Awake() {
 		//Reference physic2D to flag's Rigidbody2D
@@ -31,7 +33,7 @@ public class FlagCtrl : MonoBehaviour {
 		// [Condition] Any button is pressed
 		if (hasStarted) {
 			// S or DownArrow add force up to the flag
-			if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow) ){
+			if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) {
 				physic2D.AddForce (Vector2.up * forceMagnitude, ForceMode2D.Impulse);
 			}
 			// A or LeftArrow add force up and to the left of the flag
@@ -40,19 +42,18 @@ public class FlagCtrl : MonoBehaviour {
 			}
 			// D or RightArrow add force up and to the right of the flag	
 			if (Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow)) {
-				physic2D.AddForce ( (Vector2.up + Vector2.right) * forceMagnitude, ForceMode2D.Impulse );
+				physic2D.AddForce ((Vector2.up + Vector2.right) * forceMagnitude, ForceMode2D.Impulse);
 			}
-
+			
 		} else if (Input.anyKeyDown && !hasStarted) {
 			hasStarted = true;
 			physic2D.WakeUp ();
 		} 
 	}
 
-	void renderStrings() {
-		LineRenderer[] flagStrings = gameObject.GetComponentsInChildren<LineRenderer> ();
-		foreach (LineRenderer flagString in flagStrings) {
-			flagString.SetPosition (1, gameObject.transform.position);
-		}
+	void OnTriggerEnter2D (Collider2D other) {
+		print ("You got hit by a bird R.I.P");
+		Time.timeScale = 0;
+		print ("Move to Play again scene");
 	}
 }
