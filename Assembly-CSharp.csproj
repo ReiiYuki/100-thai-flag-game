@@ -46,13 +46,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\ButtonEvent.cs" />
      <Compile Include="Assets\Scripts\CameraCtrl.cs" />
      <Compile Include="Assets\Scripts\ChangeScene.cs" />
      <Compile Include="Assets\Scripts\FlagControl.cs" />
      <Compile Include="Assets\Scripts\FlagCtrl.cs" />
      <Compile Include="Assets\Scripts\FloorDetection.cs" />
+     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
      <Compile Include="Assets\Scripts\LanguageManager.cs" />
+     <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\WindForce.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
