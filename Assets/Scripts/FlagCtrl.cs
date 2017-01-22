@@ -52,8 +52,13 @@ public class FlagCtrl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		print ("You got hit by a bird R.I.P");
-		Time.timeScale = 0;
-		print ("Move to Play again scene");
+        if (other.tag == "Win")
+            print("You win");
+        if (other.tag == "Obtacle")
+        {
+            print("You got hit by a bird R.I.P");
+            print("Move to Play again scene");
+        }
+        Time.timeScale = 0;
 	}
 }
