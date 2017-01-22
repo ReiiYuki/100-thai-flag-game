@@ -15,12 +15,14 @@ public class FlagCtrl : MonoBehaviour {
 	private GameObject topAnchor;
 	private GameObject bottomAnchor;
 	private int hitPoint = 1;
+    private double time;
 
 	void Awake() {
 		//Reference physic2D to flag's Rigidbody2D
 		physic2D = GetComponent<Rigidbody2D> ();
 		//Remove flag from physics simulation
-		physic2D.Sleep ();	
+		physic2D.Sleep ();
+        time = 0;
 	}
 
 	// Use this for initialization
@@ -32,6 +34,7 @@ public class FlagCtrl : MonoBehaviour {
 		// Start Physics simulation and take user's inputs 
 		// [Condition] Any button is pressed
 		if (hasStarted) {
+            time += Time.deltaTime;
 			// S or DownArrow add force up to the flag
 			if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) {
 				physic2D.AddForce (Vector2.up * forceMagnitude, ForceMode2D.Impulse);
@@ -52,8 +55,14 @@ public class FlagCtrl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-		print ("You got hit by a bird R.I.P");
-		Time.timeScale = 0;
-		print ("Move to Play again scene");
+        if (other.tag == "Win")
+            print("You win");
+        if (other.tag == "Obtacle")
+        {
+            print("You got hit by a bird R.I.P");
+            print("Move to Play again scene");
+        }
+        print("Total time = " + time);
+        Time.timeScale = 0;
 	}
 }
