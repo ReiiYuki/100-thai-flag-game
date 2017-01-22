@@ -1,8 +1,13 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\FlagCtrl.cs">
     <Files>
-      <File FileName="Assets\Scripts\FlagCtrl.cs" Line="15" Column="14" />
+      <File FileName="Assets\Scripts\FlagCtrl.cs" Line="54" Column="21" />
+      <File FileName="Assets\Scripts\CameraCtrl.cs" Line="22" Column="15" />
+      <File FileName="Assets\Scripts\Obstacle.cs" Line="12" Column="2" />
+      <File FileName="Assets\Scripts\HorizontalMovementBird.cs" Line="30" Column="3" />
+      <File FileName="Assets\Scripts\Bird.cs" Line="19" Column="3" />
+      <File FileName="Assets\Scripts\PoleCtrl.cs" Line="45" Column="40" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
