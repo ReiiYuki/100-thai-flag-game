@@ -16,8 +16,11 @@ public class FlagCtrl : MonoBehaviour {
 	private GameObject bottomAnchor;
 	private int hitPoint = 1;
     private double time;
+    private Rect leftScreen = new Rect(0, 0, Screen.width / 2, Screen.height);
+    private Rect rightScreen = new Rect(Screen.width / 2, 0, Screen.width, Screen.height);
 
-	void Awake() {
+
+    void Awake() {
 		//Reference physic2D to flag's Rigidbody2D
 		physic2D = GetComponent<Rigidbody2D> ();
 		//Remove flag from physics simulation
@@ -40,11 +43,11 @@ public class FlagCtrl : MonoBehaviour {
 				physic2D.AddForce (Vector2.up * forceMagnitude, ForceMode2D.Impulse);
 			}
 			// A or LeftArrow add force up and to the left of the flag
-			if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow)) {
+			if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetMouseButtonDown(0) && leftScreen.Contains(Input.mousePosition))) {
 				physic2D.AddForce ((Vector2.up + Vector2.left) * forceMagnitude, ForceMode2D.Impulse);
 			}
 			// D or RightArrow add force up and to the right of the flag	
-			if (Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow)) {
+			if (Input.GetKeyDown (KeyCode.D) || Input.GetKeyDown (KeyCode.RightArrow) || (Input.GetMouseButtonDown(0) && rightScreen.Contains(Input.mousePosition))) {
 				physic2D.AddForce ((Vector2.up + Vector2.right) * forceMagnitude, ForceMode2D.Impulse);
 			}
 			
