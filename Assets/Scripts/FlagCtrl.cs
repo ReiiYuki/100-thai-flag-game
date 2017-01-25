@@ -16,8 +16,8 @@ public class FlagCtrl : MonoBehaviour {
 	private GameObject bottomAnchor;
 	private int hitPoint = 1;
     private double time;
-    private Rect leftScreen = new Rect(0, 0, Screen.width / 2, Screen.height);
-    private Rect rightScreen = new Rect(Screen.width / 2, 0, Screen.width, Screen.height);
+    private Rect leftScreen = new Rect(0, 0, Screen.width / 2, Screen.height*0.8f);
+    private Rect rightScreen = new Rect(Screen.width / 2, 0, Screen.width, Screen.height*0.8f);
 
 
     void Awake() {
