@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class ChangeScene : MonoBehaviour {
     private float totalTime;
     private bool isDiscard;
@@ -16,7 +16,7 @@ public class ChangeScene : MonoBehaviour {
         totalTime += Time.deltaTime;
         if (totalTime > 1&&!isDiscard)
         {
-            Application.LoadLevel(scene);
+            SceneManager.LoadScene(scene);
             isDiscard = true;
         }
 	}
