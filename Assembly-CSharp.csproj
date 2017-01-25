@@ -46,8 +46,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Airplane.cs" />
-     <Compile Include="Assets\Drone.cs" />
+     <Compile Include="Assets\Scripts\Airplane.cs" />
      <Compile Include="Assets\Scripts\Bird.cs" />
      <Compile Include="Assets\Scripts\ButtonEvent.cs" />
      <Compile Include="Assets\Scripts\CameraCtrl.cs" />
@@ -60,6 +59,7 @@
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\PoleCtrl.cs" />
      <Compile Include="Assets\Scripts\WindForce.cs" />
+     <Compile Include="Assets\Sprites\Drone.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
