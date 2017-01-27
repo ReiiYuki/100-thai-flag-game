@@ -10,7 +10,6 @@ public class InputName : MonoBehaviour {
     // Use this for initialization
     void Start () {
         nameField.onEndEdit.AddListener(delegate { SubmitName(); });
-
 	}
 	
 	// Update is called once per frame
