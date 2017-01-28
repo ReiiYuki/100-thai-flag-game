@@ -36,4 +36,10 @@ public class InputName : MonoBehaviour {
     {
         public string token;
     }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (PlayerPrefs.GetString("lang") == "th")
+            nameField.placeholder.GetComponent<Text>().text = "ชื่ออะไร ?" ;
+    }
 }
