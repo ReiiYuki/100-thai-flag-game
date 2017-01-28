@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class InputName : MonoBehaviour {
     public InputField nameField;
@@ -10,7 +11,6 @@ public class InputName : MonoBehaviour {
     // Use this for initialization
     void Start () {
         nameField.onEndEdit.AddListener(delegate { SubmitName(); });
-
 	}
 	
 	// Update is called once per frame
@@ -30,11 +30,18 @@ public class InputName : MonoBehaviour {
         WWW request = new WWW(SERVER_URL + GET_TOKEN, form);
         yield return request;
         Token token = JsonUtility.FromJson<Token>(request.text);
-        Debug.Log(token.token);
+        PlayerPrefs.SetString("token", token.token);
+        SceneManager.LoadScene("Main_Menu_Scene");  
     }
 
     class Token
     {
         public string token;
+    }
+
+    private void OnLevelWasLoaded(int level)
+    {
+        if (PlayerPrefs.GetString("lang") == "th")
+            nameField.placeholder.GetComponent<Text>().text = "ชื่ออะไร ?" ;
     }
 }
