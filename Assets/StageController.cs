@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StageController : MonoBehaviour {
+    public string mode;
     public GameObject playerFlag;
-
-    private float time;
-    private int currentHeight, currentHighest;
+    private int currentHeight;
 
 	// Use this for initialization
 	void Start () {
@@ -16,7 +15,10 @@ public class StageController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         currentHeight = ConvertToMeter(playerFlag.transform.position.y);
-        time += Time.deltaTime;
+        if (mode == "quick")
+        {
+
+        }
 	}
 
     int ConvertToMeter(float virtualHeight)
