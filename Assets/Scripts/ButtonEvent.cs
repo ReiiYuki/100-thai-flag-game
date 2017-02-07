@@ -8,6 +8,7 @@ public class ButtonEvent : MonoBehaviour {
     public Sprite spriteNormal;
     public Sprite spriteOnHover;
     public string language;
+    private string name;
 
 	// Use this for initialization
 	void Start () {
@@ -32,6 +33,11 @@ public class ButtonEvent : MonoBehaviour {
     private void OnMouseDown()
     {
         PlayerPrefs.SetString("lang", language);
-        SceneManager.LoadScene("Main_Menu_Scene");
+        if (name != null) {
+
+        }else
+        {
+            SceneManager.LoadScene("AskNameScene");
+        }
     }
 }
