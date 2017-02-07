@@ -34,6 +34,7 @@ public class FlagCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log((int)(transform.position.y+4.5)/2);
 		// Start Physics simulation and take user's inputs 
 		// [Condition] Any button is pressed
 		if (hasStarted) {
