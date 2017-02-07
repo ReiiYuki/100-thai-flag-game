@@ -3,8 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class StageController : MonoBehaviour {
-    public string mode;
+
+    //TODO ADD PREFAB HERE
     public GameObject playerFlag;
+
+    //TODO ADD Object pool here
+
     private int currentHeight;
 
 	// Use this for initialization
@@ -15,14 +19,18 @@ public class StageController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         currentHeight = ConvertToMeter(playerFlag.transform.position.y);
-        if (mode == "quick")
-        {
-
-        }
+        
 	}
 
     int ConvertToMeter(float virtualHeight)
     {
         return (int)(virtualHeight + 4.5) / 2;
     }
+
+    public int GetCurrentHeight()
+    {
+        return currentHeight;
+    }
+
+    //TODO Add stage here
 }
