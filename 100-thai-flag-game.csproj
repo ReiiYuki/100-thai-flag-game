@@ -75,6 +75,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Flying.cs" />
     <Compile Include="Assets\Scripts\Airplane.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\ButtonEvent.cs" />
@@ -89,6 +90,7 @@
     <Compile Include="Assets\Scripts\InputName.cs" />
     <Compile Include="Assets\Scripts\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
+    <Compile Include="Assets\Scripts\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />

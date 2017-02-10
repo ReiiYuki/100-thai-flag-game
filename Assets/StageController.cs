@@ -5,7 +5,17 @@ using UnityEngine;
 public class StageController : MonoBehaviour {
 
     //TODO ADD PREFAB HERE
-    public GameObject playerFlag;
+    public GameObject pigeonPrototype;
+    public GameObject drovePrototype;
+    public GameObject sparrowPrototype;
+    public GameObject gawowPrototype;
+    public GameObject dronePrototype;
+    public GameObject lampPrototype;
+    public GameObject thaiRocketPrototype;
+    public GameObject helicopterPrototype;
+    public GameObject hotBolloonPrototype;
+    public GameObject knifeChulaPrototype;
+    public GameObject knifeSnakePrototype;
 
     //TODO ADD Object pool here
 
@@ -33,13 +43,11 @@ public class StageController : MonoBehaviour {
         return currentHeight;
     }
 
-    //TODO Add stage here
-
     void SpawnBackground()
     {
         if (!stageBG[0]&&GetCurrentHeight()>=0)
         {
-
+            stageBG[0] = true;
         }else if (!stageBG[1] && GetCurrentHeight() >= 45)
         {
 
