@@ -95,6 +95,7 @@
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\TransactionScene.cs" />
+    <Compile Include="Assets\Scripts\Utility.cs" />
     <Compile Include="Assets\Scripts\WindForce.cs" />
     <Compile Include="Assets\StageController.cs" />
   </ItemGroup>

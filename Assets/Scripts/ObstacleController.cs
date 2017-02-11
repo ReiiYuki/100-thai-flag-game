@@ -134,4 +134,73 @@ public class ObstacleController : MonoBehaviour {
             }
         pool.Add(Instantiate(prototype, position, Quaternion.identity));
     }
+
+    void AutomaticSpawn()
+    {
+        if (Utility.CalculatePositionInMeter(camera.transform.position.y)==10)
+        {
+            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y));
+            SpawnObstacle("sparrow", new Vector2(4f, camera.transform.position.y+5f));
+            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y+7f));
+            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y+10f));
+            SpawnObstacle("drove", new Vector2(-8f, camera.transform.position.y+10f));
+            SpawnObstacle("pigeon", new Vector2(-12f, camera.transform.position.y+10f));
+            SpawnObstacle("pigeon", new Vector2(-15f, camera.transform.position.y+10f));
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 20)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 40)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 60)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 80)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 100)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 120)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 140)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 160)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 180)
+        {
+            //drove
+            //sparrow
+            //pigeon
+        }
+    }
+
 }
