@@ -13,8 +13,8 @@ public class ObstacleController : MonoBehaviour {
     public GameObject thaiRocketPrototype;
     public GameObject helicopterPrototype;
     public GameObject hotBolloonPrototype;
-    public GameObject knifeChulaPrototype;
-    public GameObject knifeSnakePrototype;
+    public GameObject kiteChulaPrototype;
+    public GameObject kiteSnakePrototype;
 
     Camera camera;
 
@@ -27,8 +27,10 @@ public class ObstacleController : MonoBehaviour {
     List<GameObject> thaiRocketPool;
     List<GameObject> helicopterPool;
     List<GameObject> hotBolloonPool;
-    List<GameObject> knifeChulaPool;
+    List<GameObject> kiteChulaPool;
     List<GameObject> snakePool;
+
+    bool spawnEven;
 
 	// Use this for initialization
 	void Start () {
@@ -38,7 +40,8 @@ public class ObstacleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+        Debug.Log("You are at " + Utility.CalculatePositionInMeter(camera.transform.position.y));
+        AutomaticSpawn();
 	}
 
     void BindingMainCamera()
@@ -57,7 +60,7 @@ public class ObstacleController : MonoBehaviour {
         thaiRocketPool = new List<GameObject>();
         helicopterPool = new List<GameObject>();
         hotBolloonPool = new List<GameObject>();
-        knifeChulaPool = new List<GameObject>();
+        kiteChulaPool = new List<GameObject>();
         snakePool = new List<GameObject>();
     }
 
@@ -110,15 +113,15 @@ public class ObstacleController : MonoBehaviour {
             selectPool = helicopterPool;
             selectPrototype = helicopterPrototype;
         }
-        else if (type == "chula-knife")
+        else if (type == "chula-kite")
         {
-            selectPool = knifeChulaPool;
-            selectPrototype = knifeChulaPrototype;
+            selectPool = kiteChulaPool;
+            selectPrototype = kiteChulaPrototype;
         }
-        else if (type == "snake-knife")
+        else if (type == "snake-kite")
         {
             selectPool = snakePool;
-            selectPrototype = knifeSnakePrototype;
+            selectPrototype = kiteSnakePrototype;
         }
         PickUpFromPool(selectPool, selectPrototype, position);
     }
@@ -128,7 +131,7 @@ public class ObstacleController : MonoBehaviour {
         foreach (GameObject go in pool)
             if (!go.activeSelf)
             {
-                go.transform.position = position
+                go.transform.position = position;
                 go.SetActive(true);
                 return;
             }
@@ -137,69 +140,108 @@ public class ObstacleController : MonoBehaviour {
 
     void AutomaticSpawn()
     {
-        if (Utility.CalculatePositionInMeter(camera.transform.position.y)==10)
+        if (Utility.CalculatePositionInMeter(camera.transform.position.y) < 10 && spawnEven)
         {
-            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y));
-            SpawnObstacle("sparrow", new Vector2(4f, camera.transform.position.y+5f));
-            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y+7f));
-            SpawnObstacle("pigeon", new Vector2(-4f, camera.transform.position.y+10f));
-            SpawnObstacle("drove", new Vector2(-8f, camera.transform.position.y+10f));
-            SpawnObstacle("pigeon", new Vector2(-12f, camera.transform.position.y+10f));
-            SpawnObstacle("pigeon", new Vector2(-15f, camera.transform.position.y+10f));
+            spawnEven = false;
         }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 20)
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y)==10&&!spawnEven)
+        {
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("sparrow", new Vector2(-2f, camera.transform.position.y+5f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y+7f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y+10f));
+            SpawnObstacle("drove", new Vector2(-4f, camera.transform.position.y+10f));
+            SpawnObstacle("pigeon", new Vector2(-6f, camera.transform.position.y+10f));
+            SpawnObstacle("pigeon", new Vector2(-8f, camera.transform.position.y+10f));
+            SpawnObstacle("gawow", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("gawow", new Vector2(-2f, camera.transform.position.y + 40f));
+            spawnEven = true;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 20&& spawnEven)
+        {
+            SpawnObstacle("chula-kite", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("snake-kite", new Vector2(-2f, camera.transform.position.y + 30f));
+            spawnEven = false;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 40&&!spawnEven)
+        {
+            SpawnObstacle("drone", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("snake-kite", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y+15));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y+20));
+            spawnEven = true;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 60&& spawnEven)
+        {
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 5f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 7f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 10f));
+            SpawnObstacle("drove", new Vector2(-4f, camera.transform.position.y + 10f));
+            SpawnObstacle("pigeon", new Vector2(-6f, camera.transform.position.y + 10f));
+            SpawnObstacle("pigeon", new Vector2(-8f, camera.transform.position.y + 10f));
+            SpawnObstacle("drove", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("drove", new Vector2(-2f, camera.transform.position.y + 40f));
+            spawnEven = false;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 80&& !spawnEven)
+        {
+            SpawnObstacle("chula-kite", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("drone", new Vector2(-2f, camera.transform.position.y+30f));
+            SpawnObstacle("snake-kite", new Vector2(-2f, camera.transform.position.y + 50f));
+            spawnEven = true;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 100&& spawnEven)
+        {
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 5f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 10f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 15f));
+            SpawnObstacle("lamp", new Vector2(-4f, camera.transform.position.y + 20f));
+            SpawnObstacle("lamp", new Vector2(-6f, camera.transform.position.y + 25f));
+            SpawnObstacle("lamp", new Vector2(-8f, camera.transform.position.y + 35f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 40f));
+            spawnEven = false;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 120&& !spawnEven)
+        {
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 3f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 7f));
+            SpawnObstacle("pigeon", new Vector2(-2f, camera.transform.position.y + 11f));
+            SpawnObstacle("drove", new Vector2(-4f, camera.transform.position.y + 20f));
+            SpawnObstacle("drove", new Vector2(-6f, camera.transform.position.y + 40f));
+            SpawnObstacle("drove", new Vector2(-8f, camera.transform.position.y + 20f));
+            SpawnObstacle("drove", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("drove", new Vector2(-2f, camera.transform.position.y + 35f));
+            spawnEven = true;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 140&& spawnEven)
+        {
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 5f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 15f));
+            SpawnObstacle("lamp", new Vector2(-4f, camera.transform.position.y + 20f));
+            SpawnObstacle("lamp", new Vector2(-6f, camera.transform.position.y + 25f));
+            SpawnObstacle("lamp", new Vector2(-8f, camera.transform.position.y + 35f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 30f));
+            SpawnObstacle("lamp", new Vector2(-2f, camera.transform.position.y + 40f));
+            spawnEven = false;
+        }
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 160&& !spawnEven)
         {
             //drove
             //sparrow
             //pigeon
+            spawnEven = true;
         }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 40)
+        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 180 && spawnEven)
         {
             //drove
             //sparrow
             //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 60)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 80)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 100)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 120)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 140)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 160)
-        {
-            //drove
-            //sparrow
-            //pigeon
-        }
-        else if (Utility.CalculatePositionInMeter(camera.transform.position.y) == 180)
-        {
-            //drove
-            //sparrow
-            //pigeon
+            spawnEven = false;
         }
     }
 

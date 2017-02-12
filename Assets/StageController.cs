@@ -29,7 +29,7 @@ public class StageController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        currentHeight = ConvertToMeter(playerFlag.transform.position.y);
+//        currentHeight = ConvertToMeter(playerFlag.transform.position.y);
         SpawnBackground();
 	}
 

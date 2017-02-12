@@ -6,7 +6,7 @@ public class Utility : MonoBehaviour {
 
 	public static int CalculatePositionInMeter(float height)
     {
-        return (int)(height) / 2;
+        return height<0?0:(int)(height) / 2;
     }
 
 }
