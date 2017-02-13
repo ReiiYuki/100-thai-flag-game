@@ -81,9 +81,9 @@
     <Compile Include="Assets\Scripts\Drone.cs" />
     <Compile Include="Assets\Scripts\FlagControl.cs" />
     <Compile Include="Assets\Scripts\FlagCtrl.cs" />
+    <Compile Include="Assets\Scripts\GameController\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
-    <Compile Include="Assets\Scripts\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
