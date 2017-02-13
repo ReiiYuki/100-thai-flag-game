@@ -64,7 +64,7 @@ public class ObstacleController : MonoBehaviour {
         snakePool = new List<GameObject>();
     }
 
-    void SpawnObstacle(string type, float x,float y)
+    GameObject SpawnObstacle(string type, float x,float y)
     {
         List<GameObject> selectPool = null;
         GameObject selectPrototype = null;
@@ -124,19 +124,21 @@ public class ObstacleController : MonoBehaviour {
             selectPool = snakePool;
             selectPrototype = kiteSnakePrototype;
         }
-        PickUpFromPool(selectPool, selectPrototype, position);
+        return PickUpFromPool(selectPool, selectPrototype, position);
     }
 
-    void PickUpFromPool(List<GameObject> pool, GameObject prototype, Vector2 position)
+    GameObject PickUpFromPool(List<GameObject> pool, GameObject prototype, Vector2 position)
     {
         foreach (GameObject go in pool)
             if (!go.activeSelf)
             {
                 go.transform.position = position;
                 go.SetActive(true);
-                return;
+                return go;
             }
-        pool.Add(Instantiate(prototype, position, Quaternion.identity));
+        GameObject go = Instantiate(prototype, position, Quaternion.identity);
+        pool.Add(go);
+        return go;
     }
 
     void AutomaticSpawn()
@@ -151,117 +153,117 @@ public class ObstacleController : MonoBehaviour {
             }else if (position == 10)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
                 SpawnObstacle("pigeon", -5.2f, cam_y);
             }
             else if (position == 20)
             {
                 spawnEven = false;
-                SpawnObstacle("drove", -3.2f, cam_y);
-                SpawnObstacle("drove", -5.2f, cam_y);
-                SpawnObstacle("drove", -7.2f, cam_y);
+                SpawnObstacle("drove", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("drove", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("drove", -7.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 35)
             {
                 spawnEven = false;
-                SpawnObstacle("snake-kite", -3.2f, cam_y);
+                SpawnObstacle("snake-kite", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 50)
             {
                 spawnEven = false;
-                SpawnObstacle("drone", -3.2f, cam_y);
+                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 75)
             {
                 spawnEven = false;
-                SpawnObstacle("gawow", -3.2f, cam_y);
+                SpawnObstacle("gawow", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 95)
             {
                 spawnEven = false;
-                SpawnObstacle("lamp", -3.2f, cam_y);
-                SpawnObstacle("lamp", -5.2f, cam_y);
-                SpawnObstacle("lamp", -7.2f, cam_y);
+                SpawnObstacle("lamp", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("lamp", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("lamp", -7.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 105)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y);
-                SpawnObstacle("pigeon", -5.2f, cam_y);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 125)
             {
                 spawnEven = false;
-                SpawnObstacle("drone", -3.2f, cam_y);
+                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 150)
             {
                 spawnEven = false;
-                SpawnObstacle("thai-rocket", -3.2f, cam_y);
+                SpawnObstacle("thai-rocket", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
             else if (position == 175)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y);
-                SpawnObstacle("pigeon", -5.2f, cam_y);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
             }
         } else
         {
             if (position == 5)
             {
                 spawnEven = true;
-                SpawnObstacle("pigeon", -3.2f,cam_y);
+                SpawnObstacle("pigeon", 3.2f,cam_y);
             }else if (position == 15)
             {
                 spawnEven = true;
 
-                SpawnObstacle("pigeon", -3.2f,cam_y);
-                SpawnObstacle("sparrow", -5.2f,cam_y);
-                SpawnObstacle("sparrow", -7.2f,cam_y);
+                SpawnObstacle("pigeon", 3.2f,cam_y);
+                SpawnObstacle("sparrow", 5.2f,cam_y);
+                SpawnObstacle("sparrow", 7.2f,cam_y);
             }else if (position == 25)
             {
                 spawnEven = true;
-                SpawnObstacle("gawow", -3.2f,cam_y);
-                SpawnObstacle("gawow", -5.2f,cam_y);
+                SpawnObstacle("gawow", 3.2f,cam_y);
+                SpawnObstacle("gawow", 5.2f,cam_y);
             }else if (position == 40)
             {
                 spawnEven = true;
-                SpawnObstacle("chula-kite", -3.2f, cam_y);
-                SpawnObstacle("chula-kite", -5.2f, cam_y);
+                SpawnObstacle("chula-kite", 3.2f, cam_y);
+                SpawnObstacle("chula-kite", 5.2f, cam_y);
             }else if (position == 60)
             {
                 spawnEven = true;
-                SpawnObstacle("lamp", -3.2f, cam_y);
-                SpawnObstacle("lamp", -5.2f, cam_y);
+                SpawnObstacle("lamp", 3.2f, cam_y);
+                SpawnObstacle("lamp", 5.2f, cam_y);
             }else if (position == 90)
             {
                 spawnEven = true;
-                SpawnObstacle("lamp", -3.2f, cam_y);
-                SpawnObstacle("lamp", -5.2f, cam_y);
+                SpawnObstacle("lamp", 3.2f, cam_y);
+                SpawnObstacle("lamp", 5.2f, cam_y);
             }else if (position == 100)
             {
                 spawnEven = true;
-                SpawnObstacle("pigeon", -3.2f, cam_y);
-                SpawnObstacle("pigeon", -5.2f, cam_y);
-                SpawnObstacle("pigeon", -7.2f, cam_y);
+                SpawnObstacle("pigeon", 3.2f, cam_y);
+                SpawnObstacle("pigeon", 5.2f, cam_y);
+                SpawnObstacle("pigeon", 7.2f, cam_y);
             }else if (position == 120)
             {
                 spawnEven = true;
-                SpawnObstacle("drone", -3.2f, cam_y);
+                SpawnObstacle("drone", 3.2f, cam_y);
             }else if (position == 140)
             {
                 spawnEven = true;
-                SpawnObstacle("hot-balloon", -3.2f, cam_y);
+                SpawnObstacle("hot-balloon", 3.2f, cam_y);
             }else if (position == 170)
             {
                 spawnEven = true;
-                SpawnObstacle("pigeon", -3.2f, cam_y);
-                SpawnObstacle("pigeon", -5.2f, cam_y);
-                SpawnObstacle("pigeon", -7.2f, cam_y);
+                SpawnObstacle("pigeon", 3.2f, cam_y);
+                SpawnObstacle("pigeon", 5.2f, cam_y);
+                SpawnObstacle("pigeon", 7.2f, cam_y);
             }else if (position == 180)
             {
                 spawnEven = true;
-                SpawnObstacle("helicopter", -3.2f, cam_y);
+                SpawnObstacle("helicopter", 3.2f, cam_y);
             }
         }
     }

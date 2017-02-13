@@ -7,7 +7,7 @@ public class Obstacle : MonoBehaviour {
 
     bool left;
 
-    GameObject SetLeft(bool isLeft)
+    public GameObject SetLeft(bool isLeft)
     {
         left = isLeft;
         return gameObject;
