@@ -77,6 +77,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Airplane.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
+    <Compile Include="Assets\Scripts\CameraCtrl.cs" />
     <Compile Include="Assets\Scripts\Drone.cs" />
     <Compile Include="Assets\Scripts\FlagControl.cs" />
     <Compile Include="Assets\Scripts\FlagCtrl.cs" />
