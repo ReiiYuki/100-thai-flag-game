@@ -10,10 +10,10 @@ public class GoToScoreBoard : MonoBehaviour {
     void Start()
     {
         SetLanguage();
-        GetComponent<Button>().onClick.AddListener(LoadQuickGame);
+        GetComponent<Button>().onClick.AddListener(LoadScoreBoard);
     }
 
-    void LoadQuickGame()
+    void LoadScoreBoard()
     {
         //SceneManager.LoadScene(5);
     }

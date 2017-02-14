@@ -86,6 +86,7 @@
     <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\LangaugeSelection.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\SceneController.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\GoToInfo.cs" />
     <Compile Include="Assets\Scripts\MainMenu\GoToScoreBoard.cs" />
     <Compile Include="Assets\Scripts\MainMenu\LogoControl.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StartGame.cs" />
