@@ -10,7 +10,7 @@ Coming Soon...
 * [@pakponj](https://github.com/pakponj)
 * [@PNNutkung](https://github.com/PNNutkung)
 * [@b5710546232](https://github.com/b5710546232)
-* [@devilmustcry](https://github.com/b5710546232)
+* [@devilmustcry](https://github.com/devilmustcry)
 * [@ThirtyCraZyLow](https://github.com/ThirtyCraZyLow)
 * [@PaiizZ](https://github.com/PaiizZ)
 * [@gunhappy](https://github.com/gunhappy)

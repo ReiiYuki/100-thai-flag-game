@@ -77,23 +77,19 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Airplane.cs" />
     <Compile Include="Assets\Scripts\Bird.cs" />
-    <Compile Include="Assets\Scripts\ButtonEvent.cs" />
     <Compile Include="Assets\Scripts\CameraCtrl.cs" />
-    <Compile Include="Assets\Scripts\ChangeScene.cs" />
-    <Compile Include="Assets\Scripts\ConnectToServer.cs" />
     <Compile Include="Assets\Scripts\Drone.cs" />
     <Compile Include="Assets\Scripts\FlagControl.cs" />
     <Compile Include="Assets\Scripts\FlagCtrl.cs" />
-    <Compile Include="Assets\Scripts\FloorDetection.cs" />
+    <Compile Include="Assets\Scripts\GameController\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
-    <Compile Include="Assets\Scripts\InputName.cs" />
-    <Compile Include="Assets\Scripts\LanguageManager.cs" />
+    <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
+    <Compile Include="Assets\Scripts\LoadingScene\SceneController.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
-    <Compile Include="Assets\Scripts\TransactionScene.cs" />
-    <Compile Include="Assets\Scripts\WindForce.cs" />
+    <Compile Include="Assets\Scripts\Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

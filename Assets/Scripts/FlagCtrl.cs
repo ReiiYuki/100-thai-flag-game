@@ -34,6 +34,7 @@ public class FlagCtrl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+        Debug.Log((int)(transform.position.y+4.5)/2);
 		// Start Physics simulation and take user's inputs 
 		// [Condition] Any button is pressed
 		if (hasStarted) {
@@ -58,14 +59,14 @@ public class FlagCtrl : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
-        if (other.tag == "Win")
-            print("You win");
+//        if (other.tag == "Win")
+    //        print("You win");
         if (other.tag == "Obtacle")
         {
             print("You got hit by a bird R.I.P");
             print("Move to Play again scene");
+            print("Total time = " + time);
+            Time.timeScale = 0;
         }
-        print("Total time = " + time);
-        Time.timeScale = 0;
 	}
 }
