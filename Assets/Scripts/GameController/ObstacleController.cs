@@ -136,9 +136,9 @@ public class ObstacleController : MonoBehaviour {
                 go.SetActive(true);
                 return go;
             }
-        GameObject go = Instantiate(prototype, position, Quaternion.identity);
-        pool.Add(go);
-        return go;
+        GameObject gb = Instantiate(prototype, position, Quaternion.identity);
+        pool.Add(gb);
+        return gb;
     }
 
     void AutomaticSpawn()
