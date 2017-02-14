@@ -4,23 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class StartGame : MonoBehaviour {
+public class GoToScoreBoard : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start()
+    {
         SetLanguage();
         GetComponent<Button>().onClick.AddListener(LoadQuickGame);
-	}
-	
-	void LoadQuickGame()
+    }
+
+    void LoadQuickGame()
     {
-        SceneManager.LoadScene(5);
+        //SceneManager.LoadScene(5);
     }
 
     void SetLanguage()
     {
         string lang = PlayerPrefs.GetString("lang");
         if (lang == "th")
-            GetComponentInChildren<Text>().text = "เริ่มเกม!";
+            GetComponentInChildren<Text>().text = "กระดานคะแนน";
     }
 }
