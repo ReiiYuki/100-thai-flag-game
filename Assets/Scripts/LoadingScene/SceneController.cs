@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour {
-    public string nextScene;
 
     void Start () {
         StartCoroutine(SwapScene());
@@ -12,6 +12,6 @@ public class SceneController : MonoBehaviour {
     IEnumerator SwapScene()
     {
         yield return new WaitForSeconds(2);
-        Debug.Log("OK");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
