@@ -13,6 +13,6 @@ public class GoToInfo : MonoBehaviour {
 
     void LoadInfo()
     {
-        //SceneManager.LoadScene(5);
+        //SceneManager.LoadScene(7);
     }
 }

@@ -15,7 +15,7 @@ public class GoToScoreBoard : MonoBehaviour {
 
     void LoadScoreBoard()
     {
-        //SceneManager.LoadScene(5);
+        //SceneManager.LoadScene(6);
     }
 
     void SetLanguage()
