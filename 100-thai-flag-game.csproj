@@ -84,7 +84,11 @@
     <Compile Include="Assets\Scripts\GameController\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
+    <Compile Include="Assets\Scripts\LoadingScene\LangaugeSelection.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\SceneController.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\GoToScoreBoard.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\LogoControl.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\StartGame.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
