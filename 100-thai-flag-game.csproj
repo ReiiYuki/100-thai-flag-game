@@ -83,6 +83,8 @@
     <Compile Include="Assets\Scripts\FlagCtrl.cs" />
     <Compile Include="Assets\Scripts\GameController\ObstacleController.cs" />
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
+    <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
+    <Compile Include="Assets\Scripts\LoadingScene\SceneController.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
