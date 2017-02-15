@@ -14,7 +14,10 @@ public class AskName : MonoBehaviour {
     {
         string name = PlayerPrefs.GetString("name");
         if (name != "")
+        {
             StartCoroutine(GetToken(name));
+            gameObject.SetActive(false);
+        }
         else
             GetComponentInChildren<InputField>().onEndEdit.AddListener(delegate { AskPlayerName(); });
     }
@@ -33,7 +36,8 @@ public class AskName : MonoBehaviour {
         WWW request = new WWW("http://54.201.229.92:3000/api/player/token/", form);
         yield return request;
         PlayerPrefs.SetString("token",JsonUtility.FromJson<Token>(request.text).token);
-        gameObject.SetActive(false);
+        if (request.text != "")
+            gameObject.SetActive(false);
     }
 
     void SetLanguage()
