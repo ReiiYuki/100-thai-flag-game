@@ -91,6 +91,7 @@
     <Compile Include="Assets\Scripts\MainMenu\GoToScoreBoard.cs" />
     <Compile Include="Assets\Scripts\MainMenu\LogoControl.cs" />
     <Compile Include="Assets\Scripts\MainMenu\StartGame.cs" />
+    <Compile Include="Assets\Scripts\MainMenu\Welcome.cs" />
     <Compile Include="Assets\Scripts\Obstacle.cs" />
     <Compile Include="Assets\Scripts\Pause.cs" />
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />

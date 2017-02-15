@@ -22,6 +22,7 @@ public class AskName : MonoBehaviour {
     void AskPlayerName()
     {
         string name = GetComponentsInChildren<Text>()[1].text;
+        if (name == "") return;
         PlayerPrefs.SetString("name", name);
         StartCoroutine(GetToken(name));
     }
