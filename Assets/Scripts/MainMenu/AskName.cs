@@ -18,8 +18,7 @@ public class AskName : MonoBehaviour {
             StartCoroutine(GetToken(name));
             gameObject.SetActive(false);
         }
-        else
-            GetComponentInChildren<InputField>().onEndEdit.AddListener(delegate { AskPlayerName(); });
+        GetComponentInChildren<InputField>().onEndEdit.AddListener(delegate { AskPlayerName(); });
     }
     
     void AskPlayerName()
