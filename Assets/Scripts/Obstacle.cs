@@ -12,4 +12,8 @@ public class Obstacle : MonoBehaviour {
         left = isLeft;
         return gameObject;
     }
+
+	public bool IsOutOfScreen() {
+		return gameObject.GetComponent<SpriteRenderer> ().isVisible;
+	}
 }
