@@ -7,9 +7,10 @@ public class ScoreTextUpdate : MonoBehaviour {
 
     string highStr = "High";
     string timeStr = "Time";
-
+    GameCore core;
 	// Use this for initialization
 	void Start () {
+        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
         SetLang();
 	}
 	
@@ -21,7 +22,7 @@ public class ScoreTextUpdate : MonoBehaviour {
     void UpdateText()
     {
         GetComponentsInChildren<Text>()[0].text = highStr+"\n" + Utility.CalculatePositionInMeter(Camera.main.transform.position.y);
-        GetComponentsInChildren<Text>()[1].text = timeStr+"\n" + (int)GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<FlagCtrl>().time;
+        GetComponentsInChildren<Text>()[1].text = timeStr+"\n" + (int)core.time;
     }
 
     void SetLang()

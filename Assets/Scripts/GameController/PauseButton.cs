@@ -5,15 +5,18 @@ using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour {
     public GameObject panel;
-	// Use this for initialization
-	void Start () {
+    GameCore core;
+
+    // Use this for initialization
+    void Start () {
+        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
         GetComponent<Button>().onClick.AddListener(Pause);
         GetComponent<Button>().onClick.AddListener(ShowMenu);
 	}
 
     void Pause()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<FlagCtrl>().Pause();
+        core.isPause = true;
     }
 
     void ShowMenu()

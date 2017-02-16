@@ -9,6 +9,7 @@ public class HorizontalMovementBird : Bird {
 	public Vector2 finalPosition;
 	public float startTime;
 	public float distance;
+    GameCore core;
 
 	// Use this for initialization
 	void Start () {
@@ -16,11 +17,12 @@ public class HorizontalMovementBird : Bird {
 		originalPosition = gameObject.transform.position;
 		finalPosition = new Vector2(-gameObject.transform.position.x, gameObject.transform.position.y);
 		distance = Vector2.Distance (originalPosition, finalPosition);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-        if (!isPause)
+        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
+    }
+
+    // Update is called once per frame
+    void Update () {
+        if (!core.isPause&&!core.isOver&&core.isStart)
 		    this.Fly ();
 	}
 
