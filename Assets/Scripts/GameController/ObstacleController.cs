@@ -40,7 +40,7 @@ public class ObstacleController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        Debug.Log("You are at " + Utility.CalculatePositionInMeter(camera.transform.position.y));
+//        Debug.Log("You are at " + Utility.CalculatePositionInMeter(camera.transform.position.y));
         AutomaticSpawn();
 	}
 

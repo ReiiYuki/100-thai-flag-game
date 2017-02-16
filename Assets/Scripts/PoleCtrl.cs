@@ -6,43 +6,36 @@ public class PoleCtrl : MonoBehaviour {
 
 	public GameObject flagAnchorPoint;
 	public GameObject[] poleAnchorPoints;
+	private Material spriteMaterial;
+	private Vector3[] linePositions;
 
 	// Use this for initialization
 	void Start () {
-		StartCoroutine (drawStrings ());
+		linePositions = new Vector3[2];
+		linePositions [1] = flagAnchorPoint.transform.position;
+		spriteMaterial = new Material (Shader.Find ("Sprites/Default"));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-//		drawStrings ();
+		drawStrings ();
 	}
 
-//	void drawStrings() {
-//		for (int i = 0; i < poleAnchorPoints.Length ; i++) {
-////			LineRenderer lr = poleAnchorPoints[i].AddComponent <LineRenderer>();
-//			GameObject line = new GameObject();
-//			LineRenderer lr = line.AddComponent<LineRenderer> ();
-//			lr.material = new Material (Shader.Find ("Sprites/Default"));
-//			lr.startColor = new Color (224f, 224f, 224f);
-//			lr.endColor = new Color (160f, 160f, 160f);
-//			lr.startWidth = 0.025f;
-//			lr.SetPositions ( new Vector3[2] { flagAnchorPoint.transform.position, poleAnchorPoints[i].transform.position } );
-////			GameObject.DestroyObject(lr, 0.01f);
-//			GameObject.DestroyObject(line, 0.0185f);
-//		}
-//	}
-
-	IEnumerator drawStrings() {
+	void drawStrings() {
 		for (int i = 0; i < poleAnchorPoints.Length ; i++) {
-			LineRenderer lr = poleAnchorPoints[i].AddComponent <LineRenderer>();
-			lr.material = new Material (Shader.Find ("Sprites/Default"));
-			lr.startColor = new Color (224f, 224f, 224f);
-			lr.endColor = new Color (160f, 160f, 160f);
-			lr.startWidth = 0.05f;
-			lr.SetPositions ( new Vector3[2] { flagAnchorPoint.transform.position, poleAnchorPoints[i].transform.position } );
-			GameObject.DestroyObject(lr, 0.02f);
+			GameObject line = new GameObject ();
+			LineRenderer lr = line.AddComponent<LineRenderer> ();
+			lr.material = spriteMaterial;
+			lr.startColor = Color.white;
+			lr.endColor = Color.white;
+			lr.startWidth = 0.02f;
+			linePositions [0] = poleAnchorPoints [i].transform.position;
+			linePositions [1] = flagAnchorPoint.transform.position;
+			lr.SetPositions (linePositions);
+
+			GameObject.DestroyObject (line, Time.deltaTime);
+
 		}
-		yield return new WaitForSeconds (0.02f);
-		yield return drawStrings();
 	}
+
 }
