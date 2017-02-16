@@ -105,6 +105,10 @@
     <Compile Include="Assets\Scripts\Reset.cs" />
     <Compile Include="Assets\Scripts\Scoreboard\ScoreHeaderLang.cs" />
     <Compile Include="Assets\Scripts\Scoreboard\Scoreboard.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\DesktopPlatformTutorial.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\FlagMovement.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\MobilePlatformTutorial.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\TutorialSelection.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
