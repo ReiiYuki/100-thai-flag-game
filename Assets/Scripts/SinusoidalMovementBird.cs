@@ -20,13 +20,18 @@ public class SinusoidalMovementBird : Bird {
 	public int direction;
 	public bool hasFlipped;
 
+	private Vector3 currentScale;
+
 	void Start() {
 		maxDistance = 4.5f;
 		nextPosition = Vector2.zero;
+		currentScale = gameObject.transform.localScale;
 		if (gameObject.transform.position.x >= 0) {
 			direction = 1;
 		} else {
 			direction = -1;
+			currentScale.x = -1f;
+			gameObject.transform.localScale = currentScale;
 		}
 	}
 
@@ -39,6 +44,8 @@ public class SinusoidalMovementBird : Bird {
 	public override void Fly() {
 		if (canFlip ()) {
 			direction *= -1;
+			currentScale.x *= -1;
+			gameObject.transform.localScale = currentScale;
 		} 
 		position_x = gameObject.transform.position.x + (flyingSpeed * Time.deltaTime * direction);
 		position_y = Mathf.Sin ( Mathf.Deg2Rad * position_x * 90 );
