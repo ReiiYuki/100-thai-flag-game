@@ -82,6 +82,8 @@
     <Compile Include="Assets\Scripts\FlagControl.cs" />
     <Compile Include="Assets\Scripts\FlagCtrl.cs" />
     <Compile Include="Assets\Scripts\GameController\ObstacleController.cs" />
+    <Compile Include="Assets\Scripts\GameController\PauseButton.cs" />
+    <Compile Include="Assets\Scripts\GameController\ScoreTextUpdate.cs" />
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
     <Compile Include="Assets\Scripts\Info\InfoLang.cs" />
     <Compile Include="Assets\Scripts\Info\LinkToOutside.cs" />
