@@ -10,7 +10,7 @@ public class FlagCtrl : MonoBehaviour {
 	// Scalar value of force to be added to flag's Rigidbody2D
 	// Exposed on inspector
 	public float forceMagnitude = 7.5f;
-	public bool hasStarted = false;
+	public bool hasStarted;
 	//	private bool hasDied = false;
 	//	private GameObject topAnchor;
 	//	private GameObject bottomAnchor;
@@ -29,23 +29,16 @@ public class FlagCtrl : MonoBehaviour {
 		physic2D.Sleep ();
 		time = 0;
 		max_y_velocity = 8f;
-	}
-
-	// Use this for initialization
-	//	void Start () {
-	//	}
+        hasStarted = false;
+    }
 
 	// Update is called once per frame
 	void Update () {
-		//        Debug.Log((int)(transform.position.y+4.5)/2);
 		// Start Physics simulation and take user's inputs 
 		// [Condition] Any button is pressed
 		if (hasStarted) {
 			time += Time.deltaTime;
-			// S or DownArrow add force up to the flag
-//			if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) {
-//				physic2D.AddForce (Vector2.up * forceMagnitude, ForceMode2D.Impulse);
-//			}
+
 			// A or LeftArrow add force up and to the left of the flag
 			if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetMouseButtonDown(0) && leftScreen.Contains(Input.mousePosition))) {
 				physic2D.AddForce ((Vector2.up + Vector2.left) * forceMagnitude, ForceMode2D.Impulse);
@@ -65,12 +58,17 @@ public class FlagCtrl : MonoBehaviour {
 			currentVelocity.y = Mathf.Clamp (physic2D.velocity.y, -max_y_velocity, max_y_velocity);
 			physic2D.velocity = currentVelocity;
 
-			//			}
 		} else if (Input.anyKeyDown && !hasStarted) {
 			hasStarted = true;
 			physic2D.WakeUp ();
 		} 
 	}
+
+    public void Pause()
+    {
+        hasStarted = false;
+        physic2D.Sleep();
+    } 
 
 	void OnTriggerEnter2D (Collider2D other) {
 		//        if (other.tag == "Win")

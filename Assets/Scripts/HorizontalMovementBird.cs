@@ -20,7 +20,8 @@ public class HorizontalMovementBird : Bird {
 	
 	// Update is called once per frame
 	void Update () {
-		this.Fly ();
+        if (!isPause)
+		    this.Fly ();
 	}
 
 	public override void Fly() {

@@ -5,11 +5,16 @@ using UnityEngine;
 //Base class for any future obstacles
 public class Obstacle : MonoBehaviour {
 
-    bool left;
+    public bool isPause;
 
-    public GameObject SetLeft(bool isLeft)
+    void Start()
     {
-        left = isLeft;
-        return gameObject;
+        isPause = false;
     }
+
+    void SetPause(bool pause)
+    {
+        isPause = pause;
+    }
+
 }

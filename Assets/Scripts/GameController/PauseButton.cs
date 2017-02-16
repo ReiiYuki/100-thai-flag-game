@@ -4,18 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class PauseButton : MonoBehaviour {
-
+    public GameObject panel;
 	// Use this for initialization
 	void Start () {
         GetComponent<Button>().onClick.AddListener(Pause);
-	}
-	
-	// Update is called once per frame
-	void Update () {
+        GetComponent<Button>().onClick.AddListener(ShowMenu);
 	}
 
     void Pause()
     {
-       Time.timeScale = 0;
+        GameObject.FindGameObjectWithTag("Player").GetComponentInChildren<FlagCtrl>().Pause();
+    }
+
+    void ShowMenu()
+    {
+        panel.SetActive(true);
     }
 }
