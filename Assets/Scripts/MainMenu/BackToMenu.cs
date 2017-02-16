@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class BackToMenu : MonoBehaviour {
 
 	void Start () {
+        Time.timeScale = 1;
         GetComponent<Button>().onClick.AddListener(BackToMainMenu);
 	}
 	
