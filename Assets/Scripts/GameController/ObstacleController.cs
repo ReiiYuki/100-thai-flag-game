@@ -160,7 +160,7 @@ public class ObstacleController : MonoBehaviour {
             {
                 spawnEven = false;
                 SpawnObstacle("drove", -3f, cam_y).GetComponent<Obstacle>();
-                SpawnObstacle("drove", -1f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("gawow", -1f, cam_y).GetComponent<Obstacle>();
                 SpawnObstacle("drove", -2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 35)
@@ -258,7 +258,7 @@ public class ObstacleController : MonoBehaviour {
             {
                 spawnEven = true;
                 SpawnObstacle("pigeon", 3f, cam_y);
-                SpawnObstacle("pigeon", 2f, cam_y);
+                SpawnObstacle("gawow", 2f, cam_y);
                 SpawnObstacle("pigeon", 1f, cam_y);
             }else if (position == 180)
             {

@@ -119,6 +119,7 @@
     <Compile Include="Assets\Scripts\Tutorial\LanguageManager.cs" />
     <Compile Include="Assets\Scripts\Tutorial\MobilePlatformTutorial.cs" />
     <Compile Include="Assets\Scripts\Tutorial\TutorialSelection.cs" />
+    <Compile Include="Assets\Scripts\Tutorial\WarningText.cs" />
     <Compile Include="Assets\Scripts\Utility.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
