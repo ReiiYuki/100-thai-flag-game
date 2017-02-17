@@ -12,7 +12,7 @@ public class HelicopterMovement1 : Obstacle {
 	
 	// Update is called once per frame
 	void Update () {
-        //        if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
+       if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
         Follow();
        if (!IsOutOfScreen())
             transform.position = origin;
