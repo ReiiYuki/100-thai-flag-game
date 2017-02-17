@@ -176,7 +176,7 @@ public class ObstacleController : MonoBehaviour {
             else if (position == 75)
             {
                 spawnEven = false;
-                SpawnObstacle("gawow", -3f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("thai-rocket", -3f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 95)
             {

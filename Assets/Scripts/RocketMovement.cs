@@ -10,7 +10,7 @@ public class RocketMovement : MonoBehaviour {
 	void Start () {
         speed = 5f;
         SelectDirection();
-        transform.position = new Vector2(transform.position.x,transform.position.y-3f);
+        transform.position = new Vector2(transform.position.x,transform.position.y-4f);
     }
 	
 	// Update is called once per frame
