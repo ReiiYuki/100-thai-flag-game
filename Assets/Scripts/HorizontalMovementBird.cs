@@ -25,11 +25,6 @@ public class HorizontalMovementBird : Bird {
 			findDistance ();
 		}
 		this.Fly ();
-		if (IsOutOfScreen ()) {
-			print ("Visible");
-		} else {
-			print ("Invisible");
-		}
 	}
 
 	public override void Fly() {
