@@ -32,7 +32,8 @@ public class EndPanel : MonoBehaviour {
 
     void SetFinishText()
     {
-        string finalText = core.isWin ? "Win!" : "Lose" +"\n"+"Score : "+core.CalculateScore()+"\nRank : "+rank;
+        string result = core.isWin ? "Win!" : "Lose";
+        string finalText = result +"\n"+"Score : "+core.CalculateScore()+"\nRank : "+rank;
         GetComponentInChildren<Text>().text = finalText;
     }
 
