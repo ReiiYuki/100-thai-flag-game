@@ -109,6 +109,7 @@
     <Compile Include="Assets\Scripts\PoleCtrl.cs" />
     <Compile Include="Assets\Scripts\PoopyBird.cs" />
     <Compile Include="Assets\Scripts\Reset.cs" />
+    <Compile Include="Assets\Scripts\RocketMovement.cs" />
     <Compile Include="Assets\Scripts\Scoreboard\ScoreHeaderLang.cs" />
     <Compile Include="Assets\Scripts\Scoreboard\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\SinusoidalMovementBird.cs" />
