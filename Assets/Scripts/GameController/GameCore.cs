@@ -28,7 +28,6 @@ public class GameCore : MonoBehaviour {
         if (isOver || isWin)
         {
             endPanel.SetActive(true);
-            endPanel.GetComponent<EndPanel>().Activate();
         }
         if (Utility.CalculatePositionInMeter(Camera.main.transform.position.y) == 190)
             isWin = true;
@@ -39,6 +38,6 @@ public class GameCore : MonoBehaviour {
 
     public int CalculateScore()
     {
-        return (int) (Utility.CalculatePositionInMeter(maxHeight) / time*100f);
+        return (int) (Utility.CalculatePositionInMeter(maxHeight)*10f + 100f/time);
     }
 }

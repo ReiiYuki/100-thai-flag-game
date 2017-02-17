@@ -10,59 +10,42 @@ public class EndPanel : MonoBehaviour {
     float height;
     float score;
     int rank;
+    bool isLoadRank;
     GameCore core;
+
+    public GameObject mainButt;
 
 	// Use this for initialization
 	void Start () {
         core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
-	}
+        isLoadRank = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
-		if ((int)time == 0 && (int)height == 0 && score == core.CalculateScore())
+        if (!isLoadRank)
         {
-            SetFinishText();
-            if (Input.anyKey)
-                SceneManager.LoadScene(4);
-        }else
-        {
-            time -= time!=0?Time.deltaTime:0;
-            score += score!=core.CalculateScore()?Time.deltaTime:0;
-            height -= height != 0 ? Time.deltaTime : 0;
-            SetText();
+            isLoadRank = true;
+            StartCoroutine(GetRank());
         }
-
 	}
-
-    public void Activate()
-    {
-        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
-        time = core.time;
-        height = core.maxHeight;
-        score = 0;
-        StartCoroutine(GetRank());
-    }
 
     void SetFinishText()
     {
-        string finalText = core.isWin ? "Win!" : "Lose" +"\n"+"Score : "+score+"\nRank :"+rank;
-        GetComponentInChildren<Text>().text = finalText;
-    }
-
-    void SetText()
-    {
-        string finalText = core.isWin ? "Win!" : "Lose" + "\n"+"Height : "+(int)height+" Time : "+(int)time + "\nScore : " + (int)score ;
+        string finalText = core.isWin ? "Win!" : "Lose" +"\n"+"Score : "+core.CalculateScore()+"\nRank : "+rank;
         GetComponentInChildren<Text>().text = finalText;
     }
 
     IEnumerator GetRank()
     {
         WWWForm form = new WWWForm();
-        form.AddField("token",PlayerPrefs.GetString("token"));
+        form.AddField("token", PlayerPrefs.GetString("token"));
         form.AddField("score", core.CalculateScore());
         WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
         yield return request;
         rank = JsonUtility.FromJson<Rank>(request.text).ranking;
+        SetFinishText();
+        mainButt.SetActive(true);
     }
     class Rank
     {
