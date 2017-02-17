@@ -24,7 +24,7 @@ public class HelicopterMovement1 : Obstacle {
           if (distance <= 30)
           {
               Vector2 position = playerPos - transform.position;
-              transform.Translate(position * Time.deltaTime * 1f);
+              transform.Translate(position * Time.deltaTime * 1.5f);
               transform.Rotate(new Vector3(0, 0, distance*-1)*Time.deltaTime);
           }else
           {
