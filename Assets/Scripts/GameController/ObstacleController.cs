@@ -176,7 +176,7 @@ public class ObstacleController : MonoBehaviour {
             else if (position == 75)
             {
                 spawnEven = false;
-                SpawnObstacle("thai-rocket", -3f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("thai-rocket", -2.8f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 95)
             {
@@ -199,7 +199,7 @@ public class ObstacleController : MonoBehaviour {
             else if (position == 150)
             {
                 spawnEven = false;
-                SpawnObstacle("thai-rocket", -3f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("thai-rocket", -2.8f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 175)
             {
