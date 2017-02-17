@@ -93,6 +93,7 @@
     <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
     <Compile Include="Assets\Scripts\Info\InfoLang.cs" />
     <Compile Include="Assets\Scripts\Info\LinkToOutside.cs" />
+    <Compile Include="Assets\Scripts\KiteMovement.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
     <Compile Include="Assets\Scripts\LoadingScene\LangaugeSelection.cs" />
