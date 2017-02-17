@@ -13,7 +13,7 @@ public class KiteMovement : Obstacle {
 	// Update is called once per frame
 	void Update () {
         if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
-            transform.Translate(new Vector2(2f, 8f)*Time.deltaTime*0.1f);
+            transform.Translate(new Vector2(2f, 8f)*Time.deltaTime*0.3f);
         if ((origin.x <= 0 && transform.position.x > 3)&&(origin.x>0 && transform.position.x<-3))
             transform.position = origin;
 	}
