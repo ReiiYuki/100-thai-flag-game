@@ -21,6 +21,7 @@ public class DiagonalMovementBird : Bird {
 
 	// Find the vector for the direction of the bird and normalize it
 	void Start () {
+        initCore();
 		GameObject levelManagerObj = GameObject.FindWithTag("LevelManager");
 		target = levelManagerObj.GetComponent<LevelManager> ().GetPlayer();
 
@@ -45,8 +46,11 @@ public class DiagonalMovementBird : Bird {
 			currentScale.x *= -1;
 			gameObject.transform.localScale = currentScale;
 		}
-		Fly ();
-	}
+        if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
+            Fly();
+        if (!IsOutOfScreen())
+            gameObject.SetActive(false);    
+    }
 
 	// Translate the bird 
 	public override void Fly() {
