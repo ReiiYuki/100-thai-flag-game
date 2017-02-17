@@ -5,12 +5,10 @@ using UnityEngine;
 public class SpriteFading : MonoBehaviour {
 
 	public SpriteRenderer spriteRenderer;
-	public float fadeSpeed = 0.25f;
+	public float fadeSpeed = 0.4f;
 
 	float alpha = 0.0f;
 	int fadeDir = 1;
-
-	public string name;
 
 	public GameObject nameText;
 
@@ -20,7 +18,6 @@ public class SpriteFading : MonoBehaviour {
 	void Start () {
 		spriteRenderer = gameObject.GetComponent<SpriteRenderer> ();
 		nameMesh = nameText.GetComponent<TextMesh> ();
-		nameMesh.text = name;
 		nameMesh.color = Color.clear;
 	}
 	
@@ -34,7 +31,7 @@ public class SpriteFading : MonoBehaviour {
 		
 		} else {
 			fadeDir *= -1;
-			fadeSpeed = 0.15f;
+			fadeSpeed = 0.3f;
 		}
 //		if (alpha >= 1) {
 //		}

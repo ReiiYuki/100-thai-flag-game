@@ -47,8 +47,11 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\Airplane.cs" />
+     <Compile Include="Assets\Scripts\BackgroundCtrl.cs" />
      <Compile Include="Assets\Scripts\Bird.cs" />
+     <Compile Include="Assets\Scripts\BoxSpawner.cs" />
      <Compile Include="Assets\Scripts\CameraCtrl.cs" />
+     <Compile Include="Assets\Scripts\DiagonalMovementBird.cs" />
      <Compile Include="Assets\Scripts\Drone.cs" />
      <Compile Include="Assets\Scripts\FlagControl.cs" />
      <Compile Include="Assets\Scripts\FlagCtrl.cs" />
@@ -60,6 +63,7 @@
      <Compile Include="Assets\Scripts\HorizontalMovementBird.cs" />
      <Compile Include="Assets\Scripts\Info\InfoLang.cs" />
      <Compile Include="Assets\Scripts\Info\LinkToOutside.cs" />
+     <Compile Include="Assets\Scripts\LevelManager.cs" />
      <Compile Include="Assets\Scripts\LoadingScene\Fading.cs" />
      <Compile Include="Assets\Scripts\LoadingScene\LangaugeSelection.cs" />
      <Compile Include="Assets\Scripts\LoadingScene\SceneController.cs" />
@@ -73,9 +77,17 @@
      <Compile Include="Assets\Scripts\Obstacle.cs" />
      <Compile Include="Assets\Scripts\Pause.cs" />
      <Compile Include="Assets\Scripts\PoleCtrl.cs" />
+     <Compile Include="Assets\Scripts\PoopyBird.cs" />
      <Compile Include="Assets\Scripts\Reset.cs" />
      <Compile Include="Assets\Scripts\Scoreboard\ScoreHeaderLang.cs" />
      <Compile Include="Assets\Scripts\Scoreboard\Scoreboard.cs" />
+     <Compile Include="Assets\Scripts\SinusoidalMovementBird.cs" />
+     <Compile Include="Assets\Scripts\SpriteFading.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\DesktopPlatformTutorial.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\FlagMovement.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\LanguageManager.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\MobilePlatformTutorial.cs" />
+     <Compile Include="Assets\Scripts\Tutorial\TutorialSelection.cs" />
      <Compile Include="Assets\Scripts\Utility.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
