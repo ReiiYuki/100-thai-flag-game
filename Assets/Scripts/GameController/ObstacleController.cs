@@ -253,7 +253,7 @@ public class ObstacleController : MonoBehaviour {
             }else if (position == 140)
             {
                 spawnEven = true;
-                SpawnObstacle("hot-balloon", 3f, cam_y);
+                SpawnObstacle("helicopter", 3f, cam_y);
             }else if (position == 170)
             {
                 spawnEven = true;
