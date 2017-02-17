@@ -153,59 +153,59 @@ public class ObstacleController : MonoBehaviour {
             }else if (position == 10)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>();
                 SpawnObstacle("pigeon", -5.2f, cam_y);
             }
             else if (position == 20)
             {
                 spawnEven = false;
-                SpawnObstacle("drove", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("drove", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("drove", -7.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("drove", -3.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("drove", -5.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("drove", -7.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 35)
             {
                 spawnEven = false;
-                SpawnObstacle("snake-kite", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("snake-kite", -3.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 50)
             {
                 spawnEven = false;
-                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 75)
             {
                 spawnEven = false;
-                SpawnObstacle("gawow", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("gawow", -3.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 95)
             {
                 spawnEven = false;
-                SpawnObstacle("lamp", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("lamp", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("lamp", -7.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("lamp", -3.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("lamp", -5.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("lamp", -7.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 105)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 125)
             {
                 spawnEven = false;
-                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("drone", -3.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 150)
             {
                 spawnEven = false;
-                SpawnObstacle("thai-rocket", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("thai-rocket", -3.2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 175)
             {
                 spawnEven = false;
-                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
-                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>().SetLeft(true);
+                SpawnObstacle("pigeon", -3.2f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("pigeon", -5.2f, cam_y).GetComponent<Obstacle>();
             }
         } else
         {

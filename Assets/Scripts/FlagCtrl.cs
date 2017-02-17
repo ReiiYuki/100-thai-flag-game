@@ -10,42 +10,34 @@ public class FlagCtrl : MonoBehaviour {
 	// Scalar value of force to be added to flag's Rigidbody2D
 	// Exposed on inspector
 	public float forceMagnitude = 7.5f;
-	public bool hasStarted = false;
-	//	private bool hasDied = false;
-	//	private GameObject topAnchor;
-	//	private GameObject bottomAnchor;
-	//	private int hitPoint = 1;
-	private double time;
+
 	private Rect leftScreen = new Rect(0, 0, Screen.width / 2, Screen.height*0.8f);
 	private Rect rightScreen = new Rect(Screen.width / 2, 0, Screen.width, Screen.height*0.8f);
 
 	public Vector2 currentVelocity;
 	public float max_y_velocity;
 
+    GameCore core;
+
+    void Start()
+    {
+        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
+    }
+
 	void Awake() {
 		//Reference physic2D to flag's Rigidbody2D
 		physic2D = GetComponent<Rigidbody2D> ();
 		//Remove flag from physics simulation
 		physic2D.Sleep ();
-		time = 0;
 		max_y_velocity = 8f;
-	}
-
-	// Use this for initialization
-	//	void Start () {
-	//	}
+    }
 
 	// Update is called once per frame
 	void Update () {
-		//        Debug.Log((int)(transform.position.y+4.5)/2);
 		// Start Physics simulation and take user's inputs 
 		// [Condition] Any button is pressed
-		if (hasStarted) {
-			time += Time.deltaTime;
-			// S or DownArrow add force up to the flag
-//			if (Input.GetKeyDown (KeyCode.S) || Input.GetKeyDown (KeyCode.DownArrow)) {
-//				physic2D.AddForce (Vector2.up * forceMagnitude, ForceMode2D.Impulse);
-//			}
+		if (core.isStart&&!core.isPause&&!core.isOver) {
+
 			// A or LeftArrow add force up and to the left of the flag
 			if (Input.GetKeyDown (KeyCode.A) || Input.GetKeyDown (KeyCode.LeftArrow) || (Input.GetMouseButtonDown(0) && leftScreen.Contains(Input.mousePosition))) {
 				physic2D.AddForce ((Vector2.up + Vector2.left) * forceMagnitude, ForceMode2D.Impulse);
@@ -65,11 +57,18 @@ public class FlagCtrl : MonoBehaviour {
 			currentVelocity.y = Mathf.Clamp (physic2D.velocity.y, -max_y_velocity, max_y_velocity);
 			physic2D.velocity = currentVelocity;
 
-			//			}
-		} else if (Input.anyKeyDown && !hasStarted) {
-			hasStarted = true;
+		} else if (Input.anyKeyDown && !core.isStart) {
+			core.isStart = true;
 			physic2D.WakeUp ();
 		} 
+
+        if (core.isPause||!core.isStart)
+        {
+            physic2D.Sleep();
+        }else
+        {
+            physic2D.WakeUp();
+        }
 	}
 
 	void OnTriggerEnter2D (Collider2D other) {
@@ -78,12 +77,12 @@ public class FlagCtrl : MonoBehaviour {
 		if (other.tag == "Obtacle") {
 			print ("You got hit by a " + other.gameObject.name);
 			//            print("Move to Play again scene");
-			print ("Total time = " + time);
-			Time.timeScale = 0;
+			print ("Total time = " + core.time);
+            core.isOver = true;
 		} else {
 			print ("Out of play area");
-			Time.timeScale = 0;
-			print ("Total time = " + time);
-		}
-	}
+            core.isOver = true;
+            print("Total time = " + core.time);
+        }
+    }
 }
