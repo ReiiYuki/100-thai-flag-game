@@ -12,12 +12,16 @@ public class EndPanel : MonoBehaviour {
     int rank;
     bool isLoadRank;
     GameCore core;
-
+    string winStr;
+    string loseStr;
+    string scoreStr;
+    string rankStr;
     public GameObject mainButt;
 
 	// Use this for initialization
 	void Start () {
         core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
+        SetLang();
         isLoadRank = false;
     }
 	
@@ -30,10 +34,19 @@ public class EndPanel : MonoBehaviour {
         }
 	}
 
+    void SetLang()
+    {
+        string lang = PlayerPrefs.GetString("lang");
+        winStr = lang == "th" ? "ชนะ!" : "Win!";
+        loseStr = lang == "th" ? "แพ้!" : "Lose!";
+        scoreStr = lang == "th" ? "คะแนน : " : "Score : ";
+        rankStr = lang == "th" ? "อันดับ : " : "Rank : ";
+    }
+
     void SetFinishText()
     {
-        string result = core.isWin ? "Win!" : "Lose";
-        string finalText = result +"\n"+"Score : "+core.CalculateScore()+"\nRank : "+rank;
+        string result = core.isWin ? winStr : loseStr;
+        string finalText = result +"\n"+scoreStr+core.CalculateScore()+"\n"+rankStr+rank;
         GetComponentInChildren<Text>().text = finalText;
     }
 
