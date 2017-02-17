@@ -6,11 +6,13 @@ public class LevelManager : MonoBehaviour {
 
 	private GameObject player;
 	private GameObject[] obstacles;
+	private Camera mainCamera;
 
 	// Use this for initialization
 	void Start () {
 		GetPlayer ();
 		GetObstacles ();
+		GetMainCamera ();
 	}
 
 	public GameObject GetPlayer() {
@@ -23,12 +25,19 @@ public class LevelManager : MonoBehaviour {
 		return player;
 	}
 
-	private GameObject[] GetObstacles() {
+	public GameObject[] GetObstacles() {
 		if (obstacles == null || obstacles.Length == 0) {
 			obstacles = GameObject.FindGameObjectsWithTag ("Obtacle");
 			print ("Obstacles found " + obstacles.Length);
 		}
 		return obstacles;
+	}
+
+	public Camera GetMainCamera() {
+		if (!mainCamera) {
+			mainCamera = Camera.main;
+		} 
+		return mainCamera;
 	}
 
 	// Update is called once per frame

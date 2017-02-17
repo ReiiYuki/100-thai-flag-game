@@ -9,11 +9,19 @@ public class ResumeButton : MonoBehaviour {
 	void Start () {
         core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
         GetComponent<Button>().onClick.AddListener(Resume);
+        SetLang();
 	}
 	
 	void Resume()
     {
         core.isPause = false;
         transform.parent.gameObject.SetActive(false);
+    }
+
+    void SetLang()
+    {
+        string lang = PlayerPrefs.GetString("lang");
+        if (lang == "th")
+            GetComponentInChildren<Text>().text = "เล่นต่อ";
     }
 }

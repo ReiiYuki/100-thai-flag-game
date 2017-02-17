@@ -29,7 +29,7 @@ public class FlagCtrl : MonoBehaviour {
 		physic2D = GetComponent<Rigidbody2D> ();
 		//Remove flag from physics simulation
 		physic2D.Sleep ();
-		max_y_velocity = 8f;
+		max_y_velocity = 5f;
     }
 
 	// Update is called once per frame
@@ -49,9 +49,9 @@ public class FlagCtrl : MonoBehaviour {
 
 			currentVelocity = physic2D.velocity;
 
-			if (physic2D.velocity.y >= max_y_velocity) {
+			/*if (physic2D.velocity.y >= max_y_velocity) {
 				print ("Exceeded max velocity. Clamping...");
-			}
+			}*/
 
 
 			currentVelocity.y = Mathf.Clamp (physic2D.velocity.y, -max_y_velocity, max_y_velocity);
@@ -62,7 +62,7 @@ public class FlagCtrl : MonoBehaviour {
 			physic2D.WakeUp ();
 		} 
 
-        if (core.isPause||!core.isStart||core.isOver)
+        if (core.isPause||!core.isStart||core.isOver || core.isWin)
         {
             physic2D.Sleep();
         }else
@@ -75,14 +75,9 @@ public class FlagCtrl : MonoBehaviour {
 		//        if (other.tag == "Win")
 		//        print("You win");
 		if (other.tag == "Obtacle") {
-			print ("You got hit by a " + other.gameObject.name);
-			//            print("Move to Play again scene");
-			print ("Total time = " + core.time);
             core.isOver = true;
 		} else {
-			print ("Out of play area");
             core.isOver = true;
-            print("Total time = " + core.time);
         }
     }
 }

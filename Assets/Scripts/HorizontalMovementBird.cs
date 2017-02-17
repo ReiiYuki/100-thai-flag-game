@@ -28,11 +28,6 @@ public class HorizontalMovementBird : Bird {
 		}
         if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
             this.Fly ();
-		if (IsOutOfScreen ()) {
-			print ("Visible");
-		} else {
-            gameObject.SetActive(false);
-		}   
 	}
 
 	public override void Fly() {
