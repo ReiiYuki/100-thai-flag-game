@@ -49,9 +49,9 @@ public class FlagCtrl : MonoBehaviour {
 
 			currentVelocity = physic2D.velocity;
 
-			if (physic2D.velocity.y >= max_y_velocity) {
+			/*if (physic2D.velocity.y >= max_y_velocity) {
 				print ("Exceeded max velocity. Clamping...");
-			}
+			}*/
 
 
 			currentVelocity.y = Mathf.Clamp (physic2D.velocity.y, -max_y_velocity, max_y_velocity);
