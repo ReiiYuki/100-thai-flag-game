@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class HelicopterMovement1 : Obstacle {
     Vector2 origin;
+    public float speed;
 	// Use this for initialization
 	void Start () {
         origin = transform.position;
         initCore();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
