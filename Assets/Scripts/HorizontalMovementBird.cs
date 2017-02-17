@@ -9,14 +9,13 @@ public class HorizontalMovementBird : Bird {
 	public Vector2 finalPosition;
 	public float startTime;
 	public float distance;
-    GameCore core;
 
 	public Vector3 currentScale;
 
 	// Use this for initialization
 	void Start () {
+        initCore();
 		currentScale = gameObject.transform.localScale;
-        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
         findDistance();
 	}
 	
@@ -27,13 +26,13 @@ public class HorizontalMovementBird : Bird {
 			gameObject.transform.localScale = currentScale;
 			findDistance ();
 		}
-        if (!core.isPause && !core.isOver && core.isStart)
+        if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
             this.Fly ();
 		if (IsOutOfScreen ()) {
 			print ("Visible");
 		} else {
-			print ("Invisible");
-		}
+            gameObject.SetActive(false);
+		}   
 	}
 
 	public override void Fly() {

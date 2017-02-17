@@ -24,6 +24,7 @@ public class SinusoidalMovementBird : Bird {
 	private Vector3 currentScale;
 
 	void Start() {
+        initCore();
 		maxDistance = 4.5f;
 		nextPosition = Vector2.zero;
 		// Get current scale
@@ -42,8 +43,11 @@ public class SinusoidalMovementBird : Bird {
 
 	// Update is called once per frame
 	void Update () {
-		Fly ();
-	}
+        if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
+            Fly();
+        if (!IsOutOfScreen())
+            gameObject.SetActive(false);
+    }
 
 	// Override method from super class
 	public override void Fly() {
