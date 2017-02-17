@@ -112,6 +112,7 @@
     <Compile Include="Assets\Scripts\Scoreboard\ScoreHeaderLang.cs" />
     <Compile Include="Assets\Scripts\Scoreboard\Scoreboard.cs" />
     <Compile Include="Assets\Scripts\SinusoidalMovementBird.cs" />
+    <Compile Include="Assets\Scripts\SoundManager.cs" />
     <Compile Include="Assets\Scripts\SpriteFading.cs" />
     <Compile Include="Assets\Scripts\Tutorial\DesktopPlatformTutorial.cs" />
     <Compile Include="Assets\Scripts\Tutorial\FlagMovement.cs" />
