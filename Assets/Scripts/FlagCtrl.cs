@@ -62,7 +62,7 @@ public class FlagCtrl : MonoBehaviour {
 			physic2D.WakeUp ();
 		} 
 
-        if (core.isPause||!core.isStart||core.isOver)
+        if (core.isPause||!core.isStart||core.isOver || core.isWin)
         {
             physic2D.Sleep();
         }else
