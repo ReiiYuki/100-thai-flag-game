@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class HelicopterMovement1 : Obstacle {
     Vector2 origin;
+    public float speed;
 	// Use this for initialization
 	void Start () {
         origin = transform.position;
         initCore();
-	}
+    }
 	
 	// Update is called once per frame
 	void Update () {
-        //        if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
+       if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
         Follow();
        if (!IsOutOfScreen())
             transform.position = origin;
@@ -24,7 +25,7 @@ public class HelicopterMovement1 : Obstacle {
           if (distance <= 30)
           {
               Vector2 position = playerPos - transform.position;
-              transform.Translate(position * Time.deltaTime * 1f);
+              transform.Translate(position * Time.deltaTime * 1.2f);
               transform.Rotate(new Vector3(0, 0, distance*-1)*Time.deltaTime);
           }else
           {

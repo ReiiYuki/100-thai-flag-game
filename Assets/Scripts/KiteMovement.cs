@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class KiteMovement : Obstacle {
     Vector2 origin;
+    public float speed;
 	// Use this for initialization
 	void Start () {
         initCore();
@@ -13,7 +14,7 @@ public class KiteMovement : Obstacle {
 	// Update is called once per frame
 	void Update () {
         if (!GetCore().isPause && !GetCore().isOver && GetCore().isStart)
-            transform.Translate(new Vector2(2f, 8f)*Time.deltaTime*0.3f);
+            transform.Translate(new Vector2(2f, 8f)*Time.deltaTime*speed);
         if ((origin.x <= 0 && transform.position.x > 3)&&(origin.x>0 && transform.position.x<-3))
             transform.position = origin;
 	}
