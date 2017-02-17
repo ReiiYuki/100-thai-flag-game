@@ -61,6 +61,7 @@ public class EndPanel : MonoBehaviour {
         SetFinishText();
         mainButt.SetActive(true);
     }
+    [System.Serializable]
     class Rank
     {
         public int ranking;
