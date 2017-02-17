@@ -29,7 +29,7 @@ public class FlagCtrl : MonoBehaviour {
 		physic2D = GetComponent<Rigidbody2D> ();
 		//Remove flag from physics simulation
 		physic2D.Sleep ();
-		max_y_velocity = 8f;
+		max_y_velocity = 5f;
     }
 
 	// Update is called once per frame
