@@ -80,6 +80,8 @@
     <Compile Include="Assets\Scripts\Bird.cs" />
     <Compile Include="Assets\Scripts\BoxSpawner.cs" />
     <Compile Include="Assets\Scripts\CameraCtrl.cs" />
+    <Compile Include="Assets\Scripts\CloudMaker.cs" />
+    <Compile Include="Assets\Scripts\CloudMovement.cs" />
     <Compile Include="Assets\Scripts\DiagonalMovementBird.cs" />
     <Compile Include="Assets\Scripts\Drone.cs" />
     <Compile Include="Assets\Scripts\FlagControl.cs" />
