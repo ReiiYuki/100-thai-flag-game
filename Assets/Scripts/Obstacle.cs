@@ -5,15 +5,25 @@ using UnityEngine;
 //Base class for any future obstacles
 public class Obstacle : MonoBehaviour {
 
-    bool left;
-
-    public GameObject SetLeft(bool isLeft)
+    GameCore core;
+    
+    void Start()
     {
-        left = isLeft;
-        return gameObject;
+        initCore();
     }
 
-	public bool IsOutOfScreen() {
+    public GameCore GetCore()
+    {
+        return core;
+    }
+
+    public void initCore()
+    {
+        core = GameObject.FindGameObjectWithTag("Core").GetComponent<GameCore>();
+    }
+
+    public bool IsOutOfScreen() {
 		return gameObject.GetComponent<SpriteRenderer> ().isVisible;
 	}
+
 }
