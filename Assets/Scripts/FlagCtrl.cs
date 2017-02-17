@@ -62,7 +62,7 @@ public class FlagCtrl : MonoBehaviour {
 			physic2D.WakeUp ();
 		} 
 
-        if (core.isPause||!core.isStart||core.isOver)
+        if (core.isPause||!core.isStart||core.isOver || core.isWin)
         {
             physic2D.Sleep();
         }else
@@ -75,14 +75,9 @@ public class FlagCtrl : MonoBehaviour {
 		//        if (other.tag == "Win")
 		//        print("You win");
 		if (other.tag == "Obtacle") {
-			print ("You got hit by a " + other.gameObject.name);
-			//            print("Move to Play again scene");
-			print ("Total time = " + core.time);
             core.isOver = true;
 		} else {
-			print ("Out of play area");
             core.isOver = true;
-            print("Total time = " + core.time);
         }
     }
 }

@@ -7,14 +7,16 @@ public class GameCore : MonoBehaviour {
     public bool isStart;
     public bool isPause;
     public bool isOver;
+    public bool isWin;
     public float time;
     public float maxHeight;
-
+    public GameObject endPanel;
 	// Use this for initialization
 	void Start () {
         isStart = false;
         isPause = false;
         isOver = false;
+        isWin = false;
         time = 0;
         maxHeight = 0;
 	}
@@ -23,8 +25,12 @@ public class GameCore : MonoBehaviour {
 	void Update () {
         if (isStart && !isPause && !isOver)
             time += Time.deltaTime;
-        if (isOver)
-            Debug.Log(CalculateScore());
+        if (isOver || isWin)
+        {
+            endPanel.SetActive(true);
+        }
+        if (Utility.CalculatePositionInMeter(Camera.main.transform.position.y) == 190)
+            isWin = true;
         if (Camera.main.transform.position.y > maxHeight)
             maxHeight = Camera.main.transform.position.y;
 
@@ -32,6 +38,6 @@ public class GameCore : MonoBehaviour {
 
     public int CalculateScore()
     {
-        return (int) (Utility.CalculatePositionInMeter(maxHeight) / time*100f);
+        return (int) (Utility.CalculatePositionInMeter(maxHeight)*10f + 100f/time);
     }
 }
