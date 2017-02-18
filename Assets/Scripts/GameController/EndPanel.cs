@@ -42,7 +42,7 @@ public class EndPanel : MonoBehaviour {
         loseStr = lang == "th" ? "แพ้!" : "Lose!";
         scoreStr = lang == "th" ? "คะแนน : " : "Score : ";
         rankStr = lang == "th" ? "อันดับ : " : "Rank : ";
-        failStr = lang=="th"?"การเชื่อมต่อมีปัญหา\nคะแนนของคุณจะถูกอัพโหลดเมื่อการเชื่อมต่อกลับมา": "There are problem with the connection\n Your score will be uploaded when the connection is back"; 
+        failStr = lang=="th"?"การเชื่อมต่อมีปัญหา": "There are problem with the connection"; 
     }
 
     void SetFinishText()
@@ -64,10 +64,6 @@ public class EndPanel : MonoBehaviour {
             string result = core.isWin ? winStr : loseStr;
             string finalText = result + "\n" + scoreStr + core.CalculateScore() + "\n" + failStr;
             GetComponentInChildren<Text>().text = finalText;
-            int score = PlayerPrefs.GetInt("score");
-            if (score > 0)
-                if (score < core.CalculateScore())
-                    PlayerPrefs.SetInt("score", core.CalculateScore());
         }
         else
         {
