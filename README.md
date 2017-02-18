@@ -28,6 +28,14 @@ We use pixel art because sometime people see pixel art and they can't really get
 
 We use backend service for storing the highscore of player. Our backend service is running in Amazon Web Service EC2 with Node.js and RethinkDB. You can visit our API Service in [this repository](https://github.com/PNNutkung/100-thai-flag-game-api).
 
+## Version Description
+
+a.b.c
+
+* a is big update.
+* b is new feature.
+* c is bug solved.
+
 ## Now it available in !
 ![googleplay.png](https://play.google.com/intl/en_us/badges/images/badge_new.png)
 * [Google Play Store](https://play.google.com/store/apps/details?id=com.innoma.thaiflag)
