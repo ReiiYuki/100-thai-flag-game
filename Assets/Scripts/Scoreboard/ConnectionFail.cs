@@ -7,7 +7,7 @@ public class ConnectionFail : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        SetLang();
 	}
 	
 	void SetLang()
