@@ -37,6 +37,20 @@ public class AskName : MonoBehaviour {
         PlayerPrefs.SetString("token",JsonUtility.FromJson<Token>(request.text).token);
         if (request.text != "")
             gameObject.SetActive(false);
+        int score = PlayerPrefs.GetInt("score");
+        if (score > 0)
+            StartCoroutine(PostScore(score));
+    }
+
+    IEnumerator PostScore(int score)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("token", PlayerPrefs.GetString("token"));
+        form.AddField("score", score);
+        WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
+        yield return request;
+        if (request.text != "")
+            PlayerPrefs.SetInt("score", 0);
     }
 
     void SetLanguage()
