@@ -27,6 +27,7 @@ public class AskName : MonoBehaviour {
         if (name == "") return;
         PlayerPrefs.SetString("name", name);
         StartCoroutine(GetToken(name));
+        gameObject.SetActive(false);
     }
 
     IEnumerator GetToken(string name) {
@@ -35,8 +36,20 @@ public class AskName : MonoBehaviour {
         WWW request = new WWW("http://54.201.229.92:3000/api/player/token/", form);
         yield return request;
         PlayerPrefs.SetString("token",JsonUtility.FromJson<Token>(request.text).token);
+        int score = PlayerPrefs.GetInt("score");
+        if (score > 0)
+            StartCoroutine(PostScore(score));
+    }
+
+    IEnumerator PostScore(int score)
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("token", PlayerPrefs.GetString("token"));
+        form.AddField("score", score);
+        WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
+        yield return request;
         if (request.text != "")
-            gameObject.SetActive(false);
+            PlayerPrefs.SetInt("score", 0);
     }
 
     void SetLanguage()

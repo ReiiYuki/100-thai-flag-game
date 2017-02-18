@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Scoreboard : MonoBehaviour {
-
+    public GameObject connectFailText;
     void Start () {
         StartCoroutine(LoadScoreListFromServer());
 	}
@@ -13,19 +13,25 @@ public class Scoreboard : MonoBehaviour {
     {
         WWW request = new WWW("http://54.201.229.92:3000/api/player/score");
         yield return request;
-        ScoreList scoreList = JsonUtility.FromJson<ScoreList>(request.text);
-        string scoreListStr = "";
-        string nameListStr = "";
-        string rankListStr = "";
-        for (int i = 0; i < scoreList.score_list.Length; i++)
+        if (request.text == "")
         {
-            scoreListStr += scoreList.score_list[i].score+"\n";
-            nameListStr += scoreList.score_list[i].name+"\n";
-            rankListStr += (i+1)+"\n";
+            connectFailText.SetActive(true);
+        }else
+        {
+            ScoreList scoreList = JsonUtility.FromJson<ScoreList>(request.text);
+            string scoreListStr = "";
+            string nameListStr = "";
+            string rankListStr = "";
+            for (int i = 0; i < scoreList.score_list.Length; i++)
+            {
+                scoreListStr += scoreList.score_list[i].score + "\n";
+                nameListStr += scoreList.score_list[i].name + "\n";
+                rankListStr += (i + 1) + "\n";
+            }
+            GetComponentsInChildren<Text>()[0].text = rankListStr;
+            GetComponentsInChildren<Text>()[1].text = nameListStr;
+            GetComponentsInChildren<Text>()[2].text = scoreListStr;
         }
-        GetComponentsInChildren<Text>()[0].text = rankListStr;
-        GetComponentsInChildren<Text>()[1].text = nameListStr;
-        GetComponentsInChildren<Text>()[2].text = scoreListStr;
     }
     [System.Serializable]
     class ScoreList
