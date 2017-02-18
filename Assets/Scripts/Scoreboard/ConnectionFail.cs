@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ConnectionFail : MonoBehaviour {
 
@@ -9,8 +10,10 @@ public class ConnectionFail : MonoBehaviour {
 		
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void SetLang()
+    {
+        string lang = PlayerPrefs.GetString("lang");
+        if (lang == "th")
+            GetComponent<Text>().text = "ขออภัย!\nการเชื่อมต่อมีปัญหา";
+    }
 }
