@@ -16,6 +16,7 @@ public class EndPanel : MonoBehaviour {
     string loseStr;
     string scoreStr;
     string rankStr;
+    string failStr;
     public GameObject mainButt;
 
 	// Use this for initialization
@@ -41,6 +42,7 @@ public class EndPanel : MonoBehaviour {
         loseStr = lang == "th" ? "แพ้!" : "Lose!";
         scoreStr = lang == "th" ? "คะแนน : " : "Score : ";
         rankStr = lang == "th" ? "อันดับ : " : "Rank : ";
+        failStr = lang=="th"?"การเชื่อมต่อมีปัญหา\nคะแนนของคุณจะถูกอัพโหลดเมื่อการเชื่อมต่อกลับมา": "There are problem with the connection\n Your score will be uploaded when the connection is back"; 
     }
 
     void SetFinishText()
@@ -60,7 +62,7 @@ public class EndPanel : MonoBehaviour {
         if (request.text == "")
         {
             string result = core.isWin ? winStr : loseStr;
-            string finalText = result + "\n" + scoreStr + core.CalculateScore() + "\n" + "There are problem with the connection\n Your score will be uploaded when the connection is back";
+            string finalText = result + "\n" + scoreStr + core.CalculateScore() + "\n" + failStr;
             GetComponentInChildren<Text>().text = finalText;
             int score = PlayerPrefs.GetInt("score");
             if (score > 0)
