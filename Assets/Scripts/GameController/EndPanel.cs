@@ -57,8 +57,21 @@ public class EndPanel : MonoBehaviour {
         form.AddField("score", core.CalculateScore());
         WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
         yield return request;
-        rank = JsonUtility.FromJson<Rank>(request.text).ranking;
-        SetFinishText();
+        if (request.text == "")
+        {
+            string result = core.isWin ? winStr : loseStr;
+            string finalText = result + "\n" + scoreStr + core.CalculateScore() + "\n" + "There are problem with the connection\n Your score will be uploaded when the connection is back";
+            GetComponentInChildren<Text>().text = finalText;
+            int score = PlayerPrefs.GetInt("score");
+            if (score > 0)
+                if (score < core.CalculateScore())
+                    PlayerPrefs.SetInt("score", core.CalculateScore());
+        }
+        else
+        {
+            rank = JsonUtility.FromJson<Rank>(request.text).ranking;
+            SetFinishText();
+        }
         mainButt.SetActive(true);
     }
     [System.Serializable]
