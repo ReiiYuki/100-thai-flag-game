@@ -1,12 +1,12 @@
 # Go High Thai National Flag!
 
-![gohighthaiflag.png](docs\Screenshot_20170218-015428.png)
+![gohighthaiflag.png](https://github.com/ReiiYuki/100-thai-flag-game/raw/master/docs/Screenshot_20170218-015428.png)
 
 Go High Thai National Flag! or ชักให้สูง ธงชาติไทย! is flag raising simulation game. We also apply knowledge about height of artifact in this game.
 
 ## Objective
 
-![100yr.png](Assets\Sprites\100-yr.jpg)
+![100yr.png](https://github.com/ReiiYuki/100-thai-flag-game/raw/master/Assets/Sprites/100-yr.jpg)
 
 We work on this project for celebrating 100th anniversary Thai National Flag. (28th September 2017) This project is requested by Thai National Flag Museum who want this game to be a part of history.
 
@@ -33,7 +33,7 @@ We use backend service for storing the highscore of player. Our backend service 
 * [Google Play Store](https://play.google.com/store/apps/details?id=com.innoma.thaiflag)
 
 ## Collaborators
-![innoma.png](Assets\Sprites\INNOMA.png)
+![innoma.png](https://github.com/ReiiYuki/100-thai-flag-game/raw/master/Assets/Sprites/INNOMA.png)
 * [INNOMA](https://www.facebook.com/innoma.software/)
   * [Voraton Lertrattanapaisal](https://github.com/ReiiYuki)
   * [Norawit Urailertprasert](https://github.com/wit543)
