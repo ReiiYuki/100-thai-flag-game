@@ -27,6 +27,7 @@ public class AskName : MonoBehaviour {
         if (name == "") return;
         PlayerPrefs.SetString("name", name);
         StartCoroutine(GetToken(name));
+        gameObject.SetActive(false);
     }
 
     IEnumerator GetToken(string name) {
@@ -35,7 +36,6 @@ public class AskName : MonoBehaviour {
         WWW request = new WWW("http://54.201.229.92:3000/api/player/token/", form);
         yield return request;
         PlayerPrefs.SetString("token",JsonUtility.FromJson<Token>(request.text).token);
-        gameObject.SetActive(false);
         int score = PlayerPrefs.GetInt("score");
         if (score > 0)
             StartCoroutine(PostScore(score));
