@@ -160,7 +160,7 @@ public class ObstacleController : MonoBehaviour {
             {
                 spawnEven = false;
                 SpawnObstacle("drove", -3f, cam_y).GetComponent<Obstacle>();
-                SpawnObstacle("drove", -1f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("gawow", -1f, cam_y).GetComponent<Obstacle>();
                 SpawnObstacle("drove", -2f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 35)
@@ -176,7 +176,7 @@ public class ObstacleController : MonoBehaviour {
             else if (position == 75)
             {
                 spawnEven = false;
-                SpawnObstacle("gawow", -3f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("thai-rocket", -2.8f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 95)
             {
@@ -199,7 +199,7 @@ public class ObstacleController : MonoBehaviour {
             else if (position == 150)
             {
                 spawnEven = false;
-                SpawnObstacle("thai-rocket", -3f, cam_y).GetComponent<Obstacle>();
+                SpawnObstacle("thai-rocket", -2.8f, cam_y).GetComponent<Obstacle>();
             }
             else if (position == 175)
             {
@@ -253,12 +253,12 @@ public class ObstacleController : MonoBehaviour {
             }else if (position == 140)
             {
                 spawnEven = true;
-                SpawnObstacle("hot-balloon", 3f, cam_y);
+                SpawnObstacle("helicopter", 3f, cam_y);
             }else if (position == 170)
             {
                 spawnEven = true;
                 SpawnObstacle("pigeon", 3f, cam_y);
-                SpawnObstacle("pigeon", 2f, cam_y);
+                SpawnObstacle("gawow", 2f, cam_y);
                 SpawnObstacle("pigeon", 1f, cam_y);
             }else if (position == 180)
             {

@@ -7,12 +7,19 @@ using UnityEngine.UI;
 public class BackToMenu : MonoBehaviour {
 
 	void Start () {
-        Time.timeScale = 1;
         GetComponent<Button>().onClick.AddListener(BackToMainMenu);
+        SetLang();
 	}
 	
 	void BackToMainMenu()
     {
         SceneManager.LoadScene(4);
+    }
+
+    void SetLang()
+    {
+        string lang = PlayerPrefs.GetString("lang");
+        if (lang == "th"&&gameObject.tag=="LongUI")
+            GetComponentInChildren<Text>().text = "กลับไปที่เมนูหลัก";
     }
 }
