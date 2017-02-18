@@ -19,7 +19,7 @@ public class BackToMenu : MonoBehaviour {
     void SetLang()
     {
         string lang = PlayerPrefs.GetString("lang");
-        if (lang == "th")
+        if (lang == "th"&&gameObject.tag=="LongUI")
             GetComponentInChildren<Text>().text = "กลับไปที่เมนูหลัก";
     }
 }
