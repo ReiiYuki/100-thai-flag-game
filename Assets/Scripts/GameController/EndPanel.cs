@@ -31,7 +31,13 @@ public class EndPanel : MonoBehaviour {
         if (!isLoadRank)
         {
             isLoadRank = true;
-            StartCoroutine(GetToken());
+            if (Application.internetReachability == NetworkReachability.NotReachable)
+            {
+                string result = core.isWin ? winStr : loseStr;
+                string finalText = result + "\n" + scoreStr + core.CalculateScore() + "\n" + failStr;
+                GetComponentInChildren<Text>().text = finalText;
+            }else 
+                StartCoroutine(GetToken());
         }
 	}
 
