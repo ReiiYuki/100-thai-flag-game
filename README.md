@@ -56,3 +56,4 @@ a.b.c
 
 ## Special Thanks
 * [iannnnn](http://www.f0nt.com/release/iannnnncpu/) for Font in this game.
+* [Thai Pangsakulyanont](https://github.com/dtinth) for scoring system and background music.
