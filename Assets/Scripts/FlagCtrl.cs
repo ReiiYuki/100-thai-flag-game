@@ -60,6 +60,7 @@ public class FlagCtrl : MonoBehaviour {
 		} else if (Input.anyKeyDown && !core.isStart) {
 			core.isStart = true;
 			physic2D.WakeUp ();
+            physic2D.AddForce(Vector3.up * Time.deltaTime * 2000f, ForceMode2D.Impulse);
 		} 
 
         if (core.isPause||!core.isStart||core.isOver || core.isWin)
