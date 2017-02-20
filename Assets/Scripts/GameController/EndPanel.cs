@@ -31,7 +31,7 @@ public class EndPanel : MonoBehaviour {
         if (!isLoadRank)
         {
             isLoadRank = true;
-            StartCoroutine(GetRank());
+            StartCoroutine(GetToken());
         }
 	}
 
@@ -52,10 +52,10 @@ public class EndPanel : MonoBehaviour {
         GetComponentInChildren<Text>().text = finalText;
     }
 
-    IEnumerator GetRank()
+    IEnumerator GetRank(string token)
     {
         WWWForm form = new WWWForm();
-        form.AddField("token", PlayerPrefs.GetString("token"));
+        form.AddField("token", token);
         form.AddField("score", core.CalculateScore());
         WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
         yield return request;
@@ -76,5 +76,20 @@ public class EndPanel : MonoBehaviour {
     class Rank
     {
         public int ranking;
+    }
+
+    IEnumerator GetToken()
+    {
+        WWWForm form = new WWWForm();
+        form.AddField("player_name", PlayerPrefs.GetString("name"));
+        WWW request = new WWW("http://54.201.229.92:3000/api/player/token/", form);
+        yield return request;
+        string token = JsonUtility.FromJson<Token>(request.text).token;
+        StartCoroutine(GetRank(token));
+    }
+
+    class Token
+    {
+        public string token;
     }
 }
