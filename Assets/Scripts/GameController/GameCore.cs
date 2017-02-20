@@ -38,6 +38,6 @@ public class GameCore : MonoBehaviour {
 
     public int CalculateScore()
     {
-        return (int) (Utility.CalculatePositionInMeter(maxHeight)*10f + 100f/time);
+        return (int) (Utility.CalculatePositionInMeter(maxHeight)*100f + 1000f*Mathf.Exp(-time/100));
     }
 }
