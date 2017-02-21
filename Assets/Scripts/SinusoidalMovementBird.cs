@@ -21,20 +21,23 @@ public class SinusoidalMovementBird : Bird {
 	// Direction of that the bird will fly to -- 1 fly to right while -1 fly to the left
 	public int direction;
 
+	// Starting y-position
+	public float startY;
+
 	private Vector3 currentScale;
 
 	void Start() {
         initCore();
 		maxDistance = 4.5f;
 		nextPosition = Vector2.zero;
+		startY = gameObject.transform.position.y;
 		// Get current scale
 		currentScale = gameObject.transform.localScale;
-		// If +x just fly to the right
+		direction = 1;
+
+		// If +x just fly to the left
 		if (gameObject.transform.position.x >= 0) {
 			// 
-			direction = 1;
-		// If -x just fly to the left and set localScale's x to negative -- mirror the bird's sprite
-		} else {
 			direction = -1;
 			currentScale.x = -1f;
 			gameObject.transform.localScale = currentScale;
@@ -59,7 +62,7 @@ public class SinusoidalMovementBird : Bird {
 		} 
 		// Set x and y position based on sinusoidal equation
 		position_x = gameObject.transform.position.x + (flyingSpeed * Time.deltaTime * direction);
-		position_y = Mathf.Sin ( Mathf.Deg2Rad * position_x * 90 );
+		position_y = startY +Mathf.Sin ( Mathf.Deg2Rad * position_x * 90 );
 		// Set the position!
 		setNextPosition (position_x, position_y);
 	}
