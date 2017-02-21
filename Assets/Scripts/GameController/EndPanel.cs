@@ -63,7 +63,7 @@ public class EndPanel : MonoBehaviour {
         WWWForm form = new WWWForm();
         form.AddField("token", token);
         form.AddField("score", core.CalculateScore());
-        WWW request = new WWW("http://54.201.229.92:3000/api/player/score", form);
+        WWW request = new WWW("http://54.202.250.15:3000/api/player/score", form);
         yield return request;
         if (request.text == "")
         {
@@ -88,7 +88,7 @@ public class EndPanel : MonoBehaviour {
     {
         WWWForm form = new WWWForm();
         form.AddField("player_name", PlayerPrefs.GetString("name"));
-        WWW request = new WWW("http://54.201.229.92:3000/api/player/token/", form);
+        WWW request = new WWW("http://54.202.250.15:3000/api/player/token/", form);
         yield return request;
         string token = JsonUtility.FromJson<Token>(request.text).token;
         StartCoroutine(GetRank(token));
