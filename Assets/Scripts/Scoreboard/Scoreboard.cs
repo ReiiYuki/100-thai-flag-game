@@ -11,7 +11,7 @@ public class Scoreboard : MonoBehaviour {
 
     IEnumerator LoadScoreListFromServer()
     {
-        WWW request = new WWW("http://54.201.229.92:3000/api/player/score");
+        WWW request = new WWW("http://54.202.250.15:3000/api/player/score");
         yield return request;
         if (request.text == "")
         {
