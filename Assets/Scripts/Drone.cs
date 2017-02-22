@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Drone : MonoBehaviour {
-	public Transform target;
+	/*public */Transform target;
 	public float speed = 0.1f;
 	// Use this for initialization
 	void Start () {
-		
+        target = GameObject.FindGameObjectWithTag("Player").transform;
 	}
 	
 	// Update is called once per frame
