@@ -18,9 +18,9 @@ public class LevelManager : MonoBehaviour {
 	public GameObject GetPlayer() {
 		if (!player) {
 			player = GameObject.FindWithTag ("Player");
-			print ("Player found");
+//			Debug.Log ("Player found");
 		} else {
-			print ("Player Already found");
+//			Debug.Log("Player Already found");
 		}
 		return player;
 	}
@@ -28,7 +28,7 @@ public class LevelManager : MonoBehaviour {
 	public GameObject[] GetObstacles() {
 		if (obstacles == null || obstacles.Length == 0) {
 			obstacles = GameObject.FindGameObjectsWithTag ("Obtacle");
-			print ("Obstacles found " + obstacles.Length);
+//			Debug.Log("Obstacles found " + obstacles.Length);
 		}
 		return obstacles;
 	}
@@ -39,12 +39,5 @@ public class LevelManager : MonoBehaviour {
 		} 
 		return mainCamera;
 	}
-
-	// Update is called once per frame
-//	void Update () {
-//		if (player.transform.position.y >= 100f) {
-//			
-//		}
-//	}
 
 }

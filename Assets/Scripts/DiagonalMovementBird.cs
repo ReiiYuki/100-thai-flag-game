@@ -7,15 +7,18 @@ public class DiagonalMovementBird : Bird {
 	// Target of the bird which in this context is the flag
 //	public GameObject targetParent;
 
-	private GameObject target;
+	public Vector3 start;
+	public Vector3 target;
 
 	// Direction that the bird is heading
 	public Vector3 direction;
 
 	// Modifier for the original speed of the bird
-	public float speedModifier = 2f;
+	public float speedModifier;
 
-	public float maxDistance;
+	public float distance;
+
+	public float startTime;
 
 	private Vector3 currentScale;
 
@@ -23,14 +26,21 @@ public class DiagonalMovementBird : Bird {
 	void Start () {
         initCore();
 		GameObject levelManagerObj = GameObject.FindWithTag("LevelManager");
-		target = levelManagerObj.GetComponent<LevelManager> ().GetPlayer();
+
+		speedModifier = 1.5f;
+
+		startTime = Time.time;
+		start = gameObject.transform.position;
+		target = levelManagerObj.GetComponent<LevelManager> ().GetPlayer().transform.position;
+
+		distance = Vector2.Distance (start, target);
 
 		flyingSpeed = flyingSpeed * speedModifier;
 
-		direction = target.transform.position - gameObject.transform.position;
+		direction = target - start;
 		direction.Normalize ();
 
-		maxDistance = Vector2.Distance (gameObject.transform.position, target.transform.position);
+//		maxDistance = Vector2.Distance (gameObject.transform.position, target.transform.position);
 
 		currentScale = gameObject.transform.localScale;
 		if (gameObject.transform.position.x >= 0) {
@@ -41,7 +51,9 @@ public class DiagonalMovementBird : Bird {
 	
 	// Fly awayyyyyyy
 	void Update () {
-		if (!isWithinCircle ()) {
+		if (hasReachedTarget ()) {
+//		if (!isWithinCircle ()) {
+			setTarget();
 			direction *= -1;
 			currentScale.x *= -1;
 			gameObject.transform.localScale = currentScale;
@@ -54,14 +66,21 @@ public class DiagonalMovementBird : Bird {
 
 	// Translate the bird 
 	public override void Fly() {
-		gameObject.transform.Translate (direction * Time.deltaTime * flyingSpeed);
+		float fracDistance = (Time.time - startTime) * flyingSpeed / distance;
+		gameObject.transform.position = Vector2.Lerp (start, target, fracDistance );
+//		gameObject.transform.Translate (direction * Time.deltaTime * flyingSpeed);
 	}
 
-	public bool isWithinCircle() {
-		float x = target.transform.position.x;
-		float y = target.transform.position.y;
-		float a = gameObject.transform.position.x;
-		float b = gameObject.transform.position.y;
-		return Mathf.Pow ((x - a), 2) + Mathf.Pow ((y - b), 2) <= Mathf.Pow (maxDistance, 2);
+	public bool hasReachedTarget() {
+		return Vector2.Distance(gameObject.transform.position, target) <= 0f;
 	}
+
+	public void setTarget() {
+		startTime = Time.time;
+		Vector3 temp = start;
+		start = target;
+		target = temp;
+		distance = Vector2.Distance (start, target);
+	}
+
 }
