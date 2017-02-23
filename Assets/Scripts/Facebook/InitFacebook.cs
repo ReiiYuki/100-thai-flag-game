@@ -2,18 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Facebook.Unity;
+public class InitFacebook : MonoBehaviour {
 
-public class FacebookManager : MonoBehaviour {
+    private static InitFacebook _instance;
 
-    private static FacebookManager _instance;
-
-    public static FacebookManager instance
+    public static InitFacebook instance
     {
         get
         {
             if (_instance == null)
             {
-                _instance = GameObject.FindObjectOfType<FacebookManager>();
+                _instance = GameObject.FindObjectOfType<InitFacebook>();
                 DontDestroyOnLoad(_instance.gameObject);
             }
 
@@ -21,22 +20,13 @@ public class FacebookManager : MonoBehaviour {
         }
     }
 
+    // Awake function from Unity's MonoBehavior
     void Awake()
     {
         if (_instance == null)
         {
             //If I am the first instance, make me the Singleton
             _instance = this;
-            if (!FB.IsInitialized)
-            {
-                // Initialize the Facebook SDK
-                FB.Init(InitCallback, OnHideUnity);
-            }
-            else
-            {
-                // Already initialized, signal an app activation App Event
-                FB.ActivateApp();
-            }
             DontDestroyOnLoad(this);
         }
         else
@@ -46,8 +36,17 @@ public class FacebookManager : MonoBehaviour {
             if (this != _instance)
                 Destroy(this.gameObject);
         }
+        if (!FB.IsInitialized)
+        {
+            // Initialize the Facebook SDK
+            FB.Init(InitCallback, OnHideUnity);
+        }
+        else
+        {
+            // Already initialized, signal an app activation App Event
+            FB.ActivateApp();
+        }
     }
-
 
     private void InitCallback()
     {
@@ -57,7 +56,6 @@ public class FacebookManager : MonoBehaviour {
             FB.ActivateApp();
             // Continue with Facebook SDK
             // ...
-            Debug.Log("FB Success");
         }
         else
         {
