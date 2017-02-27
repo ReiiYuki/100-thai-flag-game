@@ -14,12 +14,12 @@ public class ShareToFacebook : MonoBehaviour {
         string title = "";
         string content = "";
         if (PlayerPrefs.GetString("lang") == "th") { 
-            title = name + " ทำได้ " + "\"" + score + "\" ยินดีด้วยนะ~";
-            content = name + " ทำได้ " + "\"" + score + "\" ชักได้ "+height+" เมตรใน "+time+" วินาที"+" ยินดีด้วยนะ~";
+            title = name + " ทำได้ " + "\"" + score + "\" คะแนน ยินดีด้วยนะ~";
+            content = name + " ทำได้ " + "\"" + score + "\" คะแนน ชักได้ "+height+" เมตรใน "+time+" วินาที"+" ยินดีด้วยนะ~";
         }else
         {
-            title = name + " Get Score " + "\"" + score + "\" Congrat~";
-            content = name + " Get Score " + "\"" + score + "\" Go Height " + height + " Metres In " + time + " Seconds" + " Congrat~";
+            title = name + " Get Score " + "\"" + score + "\" Points Congrat~";
+            content = name + " Get Score " + "\"" + score + "\" คะแนน Go Height " + height + " Metres In " + time + " Seconds" + " Congrat~";
         }
         FB.ShareLink(
             new Uri("https://reiiyuki.github.io/100-thai-flag-game/"),
