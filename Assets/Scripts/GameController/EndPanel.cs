@@ -17,7 +17,7 @@ public class EndPanel : MonoBehaviour {
     string scoreStr;
     string rankStr;
     string failStr;
-    public GameObject mainButt;
+    public GameObject mainButt,shareButt;
 
 	// Use this for initialization
 	void Start () {
@@ -77,6 +77,7 @@ public class EndPanel : MonoBehaviour {
             SetFinishText();
         }
         mainButt.SetActive(true);
+        shareButt.SetActive(true);
     }
     [System.Serializable]
     class Rank

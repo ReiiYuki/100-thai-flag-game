@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ScoreTextUpdate : MonoBehaviour {
 
-    string highStr = "High";
+    string highStr = "Height";
     string timeStr = "Time";
     GameCore core;
 	// Use this for initialization

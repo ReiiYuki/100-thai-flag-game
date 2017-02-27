@@ -40,4 +40,14 @@ public class GameCore : MonoBehaviour {
     {
         return (int) (Utility.CalculatePositionInMeter(maxHeight)*100f + 1000f*Mathf.Exp(-time/100));
     }
+
+    public float GetHeight()
+    {
+        return maxHeight;
+    }
+
+    public float GetTime()
+    {
+        return time;
+    }
 }

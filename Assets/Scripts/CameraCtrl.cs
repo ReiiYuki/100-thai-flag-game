@@ -15,6 +15,7 @@ public class CameraCtrl : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
+        Debug.Log(Camera.main.transform.position);
 		//Change main camera transform's position
 		//Only y-axis value changes
 		Camera.main.transform.position = new Vector3 (Camera.main.transform.position.x,
